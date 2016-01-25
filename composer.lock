@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b2ad682a0b49c814e59d931f244c1581",
-    "content-hash": "534cd2b565a757329fc9bb33cbebbd7a",
+    "hash": "dff1b55ac0f372b2251bb831722de06d",
+    "content-hash": "0cb4b9ad9632c0db8c9d54d2b41bde31",
     "packages": [
         {
             "name": "composer/installers",
@@ -593,6 +593,57 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "drush/config-extra",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drush-ops/config-extra.git",
+                "reference": "6bd3d5aa3ca7625115683f6e687285a3f1c48a54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/drush-ops/config-extra/zipball/6bd3d5aa3ca7625115683f6e687285a3f1c48a54",
+                "reference": "6bd3d5aa3ca7625115683f6e687285a3f1c48a54",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=3.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Drush": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Moshe Weitzman",
+                    "email": "weitzman@tejasa.com"
+                },
+                {
+                    "name": "Greg Anderson",
+                    "email": "greg.1.anderson@greenknowe.org"
+                }
+            ],
+            "description": "Drush config-extra contains additional configuration Drush commands, notably config-merge.",
+            "keywords": [
+                "Drush"
+            ],
+            "time": "2015-10-16 21:32:27"
         },
         {
             "name": "drush/drush",
@@ -1185,12 +1236,12 @@
             "version": "1.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RobLoach/Console_Table.git",
-                "reference": "10d89fbbe533351dcfe5dc1e84de25d9a8395950"
+                "url": "https://github.com/pear/Console_Table.git",
+                "reference": "a129a91d8bf19317d81e68d1d3a2e18932f684e4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RobLoach/Console_Table/zipball/10d89fbbe533351dcfe5dc1e84de25d9a8395950",
+                "url": "https://api.github.com/repos/pear/Console_Table/zipball/a129a91d8bf19317d81e68d1d3a2e18932f684e4",
                 "reference": "10d89fbbe533351dcfe5dc1e84de25d9a8395950",
                 "shasum": ""
             },
@@ -3092,7 +3143,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jcalderonzumba/gastonjs/zipball/5e231b4df98275c404e1371fc5fadd34f6a121ad",
+                "url": "https://api.github.com/repos/jcalderonzumba/gastonjs/zipball/21bebb8ca03eb0f93ec2f3fad61192fb079e2622",
                 "reference": "5e231b4df98275c404e1371fc5fadd34f6a121ad",
                 "shasum": ""
             },
