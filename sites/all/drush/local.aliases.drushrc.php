@@ -1,9 +1,9 @@
 <?php
-$aliases["dev.drupal8a.com"] = array(
+$aliases["8a"] = array(
   'root' => '/Applications/MAMP/htdocs/drupal8a',
   'uri' => 'dev.drupal8a.com',
 );
-$aliases["dev.drupal8b.com"] = array(
+$aliases["8b"] = array(
   'root' => '/Applications/MAMP/htdocs/drupal8b',
   'uri' => 'dev.drupal8b.com',
 );
