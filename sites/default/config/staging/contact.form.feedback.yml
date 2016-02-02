@@ -1,0 +1,10 @@
+uuid: 47501123-1c60-4090-852b-434cd6236aba
+langcode: en
+status: true
+dependencies: {  }
+id: feedback
+label: 'Website feedback'
+recipients:
+  - ynakano@endertech.com
+reply: ''
+weight: 0
