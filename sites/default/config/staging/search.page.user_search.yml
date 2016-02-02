@@ -1,0 +1,12 @@
+uuid: cdb51341-f117-48da-9401-1b6deb707193
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user_search
+label: Users
+path: user
+weight: 0
+plugin: user_search
+configuration: {  }
