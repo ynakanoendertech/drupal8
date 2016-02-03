@@ -1,7 +1,7 @@
 uuid: b0b30bc6-4192-40e0-9706-0619cdb62d64
 name: 'drupal8 test site'
 mail: ynakano+drupal8testsite@endertech.com
-slogan: ''
+slogan: 'This is a test site slogan'
 page:
   403: ''
   404: ''
