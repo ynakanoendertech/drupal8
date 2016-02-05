@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.location.field_catagory
     - field.field.node.location.field_eligibility
     - field.field.node.location.field_how_best_to_access
     - field.field.node.location.field_location_address
@@ -28,6 +29,14 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+  field_catagory:
+    weight: 41
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_eligibility:
     weight: 39
     settings:
