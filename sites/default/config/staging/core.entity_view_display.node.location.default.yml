@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.location.field_location_url
     - field.field.node.location.field_location_zip
     - field.field.node.location.field_room_number
+    - field.field.node.location.field_services
     - node.type.location
   module:
     - link
@@ -62,6 +63,12 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_services:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
   links:
     weight: 100
 hidden: {  }
