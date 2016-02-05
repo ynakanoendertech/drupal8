@@ -3,17 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.location.field_location_address
     - field.field.node.location.field_location_url
     - field.field.node.location.field_location_zip
     - node.type.location
   module:
     - link
+    - text
     - user
 id: node.location.default
 targetEntityType: node
 bundle: location
 mode: default
 content:
+  field_location_address:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
   field_location_url:
     weight: 101
     label: above
