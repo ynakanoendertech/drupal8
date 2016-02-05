@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.location.field_location_url
+    - field.field.node.location.field_location_zip
     - node.type.location
   module:
     - link
@@ -25,6 +26,13 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+  field_location_zip:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   path:
     type: path
     weight: 30
