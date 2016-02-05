@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.location.field_location_address
+    - field.field.node.location.field_location_phone
     - field.field.node.location.field_location_url
     - field.field.node.location.field_location_zip
     - field.field.node.location.field_room_number
@@ -19,6 +20,12 @@ mode: default
 content:
   field_location_address:
     weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_location_phone:
+    weight: 105
     label: above
     settings: {  }
     third_party_settings: {  }
