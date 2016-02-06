@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.organization.field_organization_url
+    - field.field.node.organization.field_organization_zip
     - node.type.organization
   module:
     - link
@@ -25,6 +26,13 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+  field_organization_zip:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   path:
     type: path
     weight: 30
