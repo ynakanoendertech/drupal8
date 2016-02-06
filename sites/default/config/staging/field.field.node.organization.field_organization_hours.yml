@@ -1,0 +1,21 @@
+uuid: 02f9fad8-bca2-41ba-8d00-e38759f3ba99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_hours
+    - node.type.organization
+  module:
+    - text
+id: node.organization.field_organization_hours
+field_name: field_organization_hours
+entity_type: node
+bundle: organization
+label: 'Organization Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
