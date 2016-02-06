@@ -19,25 +19,25 @@ bundle: organization
 mode: default
 content:
   field_organization_address:
-    weight: 103
+    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
   field_organization_hours:
-    weight: 105
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
   field_organization_phone:
-    weight: 104
+    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
   field_organization_url:
-    weight: 101
+    weight: 0
     label: above
     settings:
       trim_length: 80
@@ -48,12 +48,14 @@ content:
     third_party_settings: {  }
     type: link
   field_organization_zip:
-    weight: 102
+    weight: 1
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   links:
-    weight: 100
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

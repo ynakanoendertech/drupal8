@@ -4,6 +4,11 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.organization.field_organization_address
+    - field.field.node.organization.field_organization_hours
+    - field.field.node.organization.field_organization_phone
+    - field.field.node.organization.field_organization_url
+    - field.field.node.organization.field_organization_zip
     - node.type.organization
   module:
     - user
@@ -14,4 +19,9 @@ mode: teaser
 content:
   links:
     weight: 100
-hidden: {  }
+hidden:
+  field_organization_address: true
+  field_organization_hours: true
+  field_organization_phone: true
+  field_organization_url: true
+  field_organization_zip: true
