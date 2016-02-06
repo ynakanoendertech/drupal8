@@ -3,8 +3,10 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.organization.field_organization_url
     - node.type.organization
   module:
+    - link
     - path
 id: node.organization.default
 targetEntityType: node
@@ -16,6 +18,13 @@ content:
     weight: 10
     settings: {  }
     third_party_settings: {  }
+  field_organization_url:
+    weight: 31
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   path:
     type: path
     weight: 30

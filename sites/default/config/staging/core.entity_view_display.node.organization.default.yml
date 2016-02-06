@@ -3,14 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.organization.field_organization_url
     - node.type.organization
   module:
+    - link
     - user
 id: node.organization.default
 targetEntityType: node
 bundle: organization
 mode: default
 content:
+  field_organization_url:
+    weight: 101
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
   links:
     weight: 100
 hidden: {  }
