@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.organization.field_organization_address
+    - field.field.node.organization.field_organization_hours
     - field.field.node.organization.field_organization_phone
     - field.field.node.organization.field_organization_url
     - field.field.node.organization.field_organization_zip
@@ -19,6 +20,12 @@ mode: default
 content:
   field_organization_address:
     weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_organization_hours:
+    weight: 105
     label: above
     settings: {  }
     third_party_settings: {  }
