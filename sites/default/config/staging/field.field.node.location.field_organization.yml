@@ -1,0 +1,26 @@
+uuid: cde5b14e-ee21-4b94-be00-b7095dde3f10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization
+    - node.type.location
+    - node.type.organization
+id: node.location.field_organization
+field_name: field_organization
+entity_type: node
+bundle: location
+label: Organization
+description: 'An <em>organization</em> to which this location belongs.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organization: organization
+    sort:
+      field: _none
+field_type: entity_reference
