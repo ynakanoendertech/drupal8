@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.location.field_location_phone
     - field.field.node.location.field_location_url
     - field.field.node.location.field_location_zip
+    - field.field.node.location.field_organization
     - field.field.node.location.field_room_number
     - field.field.node.location.field_services
     - field.field.node.location.field_services_contact
@@ -84,6 +85,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_organization:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_room_number:
     weight: 4
     settings:
