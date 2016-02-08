@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.location.field_location_phone
     - field.field.node.location.field_location_url
     - field.field.node.location.field_location_zip
+    - field.field.node.location.field_organization
     - field.field.node.location.field_room_number
     - field.field.node.location.field_services
     - field.field.node.location.field_services_contact
@@ -26,6 +27,8 @@ mode: teaser
 content:
   links:
     weight: 100
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_catagory: true
   field_eligibility: true
@@ -35,6 +38,7 @@ hidden:
   field_location_phone: true
   field_location_url: true
   field_location_zip: true
+  field_organization: true
   field_room_number: true
   field_services: true
   field_services_contact: true
