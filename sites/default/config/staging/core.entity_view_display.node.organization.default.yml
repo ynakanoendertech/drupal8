@@ -1,0 +1,61 @@
+uuid: 704f108a-c7aa-4656-a118-24525f2a9406
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.organization.field_organization_address
+    - field.field.node.organization.field_organization_hours
+    - field.field.node.organization.field_organization_phone
+    - field.field.node.organization.field_organization_url
+    - field.field.node.organization.field_organization_zip
+    - node.type.organization
+  module:
+    - link
+    - text
+    - user
+id: node.organization.default
+targetEntityType: node
+bundle: organization
+mode: default
+content:
+  field_organization_address:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_organization_hours:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_organization_phone:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_organization_url:
+    weight: 0
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_organization_zip:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  links:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

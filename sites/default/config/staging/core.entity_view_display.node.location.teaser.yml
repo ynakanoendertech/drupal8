@@ -1,0 +1,45 @@
+uuid: 075b5e3d-c0fa-499a-9000-ecab68ed4145
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.location.field_catagory
+    - field.field.node.location.field_eligibility
+    - field.field.node.location.field_how_best_to_access
+    - field.field.node.location.field_location_address
+    - field.field.node.location.field_location_hours
+    - field.field.node.location.field_location_phone
+    - field.field.node.location.field_location_url
+    - field.field.node.location.field_location_zip
+    - field.field.node.location.field_organization
+    - field.field.node.location.field_room_number
+    - field.field.node.location.field_services
+    - field.field.node.location.field_services_contact
+    - field.field.node.location.field_tags
+    - node.type.location
+  module:
+    - user
+id: node.location.teaser
+targetEntityType: node
+bundle: location
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_catagory: true
+  field_eligibility: true
+  field_how_best_to_access: true
+  field_location_address: true
+  field_location_hours: true
+  field_location_phone: true
+  field_location_url: true
+  field_location_zip: true
+  field_organization: true
+  field_room_number: true
+  field_services: true
+  field_services_contact: true
+  field_tags: true
