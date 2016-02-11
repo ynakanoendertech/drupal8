@@ -1,0 +1,61 @@
+id: basics
+label: Import locations
+migration_groups:
+  - Location import
+migration_tags:
+  - CSV
+source:
+  plugin: csv
+  path: '/Applications/MAMP/htdocs/drupal8a/csv-import/test.csv'
+  header_row_count: 1
+  keys:
+    - 'Location Name'
+  column_names:
+    0:
+      id: Identifier
+    1:
+      location_name: Location Name
+    2:
+      location_url: Location URL
+    3:
+      location_zip: Location Zip
+    4:
+      location_address: Location Address
+    5:
+      room_number: Room Number
+    6:
+      location_phone: Location Phone
+    7:
+      locations_hours: Locations Hours
+    8:
+      services: Services
+    9:
+      services_contact: Services Contact
+    10:
+      eligibility: Eligibility
+    11:
+      how_best_to_access: How Best to Access
+
+destination:
+  plugin: entity:node
+
+process:
+  type:
+    plugin: default_value
+    default_value: location
+  title: location_name
+  field_location_url: location_url
+  field_location_zip: location_zip
+  field_location_address: location_address
+  field_room_number: room_number
+  field_location_phone: location_phone
+  field_location_hours: locations_hours
+  field_services: services
+  field_services_contact: services_contact
+  field_eligibility: eligibility
+  field_how_best_to_access: how_best_to_access
+
+#dependencies:
+#  module:
+#    - custom_migrate
+
