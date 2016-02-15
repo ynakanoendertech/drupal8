@@ -1,4 +1,4 @@
-id: basics
+id: basics2
 label: Import locations
 migration_groups:
   - Location import
@@ -9,7 +9,7 @@ source:
   path: '/Applications/MAMP/htdocs/drupal8a/csv-import/test.csv'
   header_row_count: 1
   keys:
-    - 'Location Name'
+    - id
   column_names:
     0:
       id: Identifier
