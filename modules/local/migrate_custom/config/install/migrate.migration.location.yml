@@ -1,4 +1,4 @@
-id: basics2
+id: location
 label: Import locations
 migration_groups:
   - Location import
