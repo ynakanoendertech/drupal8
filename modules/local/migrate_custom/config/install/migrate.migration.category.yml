@@ -1,0 +1,61 @@
+id: category
+label: Import Category entries from CSV to taxonomy terms
+#migration_group: beer
+migration_tags:
+  - CSV
+source:
+  plugin: csv
+  path: '/Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/category.csv'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    0:
+      id: Identifier
+    1:
+      category: Category
+
+destination:
+  plugin: entity:taxonomy_term
+
+process:
+  # The simplest process plugin is named 'get' - it is the default plugin, so
+  # does not need to be explicitly named. It simply copies the source value
+  # (the 'style' field from the source database in this case) to the destination
+  # field (the taxonomy term 'name' field). You can see we simply copy the
+  # source 'details' field to destination 'description' field in the same way.
+  name: category
+
+  # Here is a new plugin - default_value. In its simplest usage here, it is used
+  # to hard-code a destination value, the vid (vocabulary ID) our taxonomy terms
+  # should be assigned to. It's important to note that while above the right
+  # side of the mappings was a source field name, here the right side of the
+  # 'default_value:' line is an actual value.
+#  vid:
+#    plugin: default_value
+#    default_value: migrate_example_beer_styles
+
+  # Here's another new plugin - migration. When importing data from another
+  # system, typically the unique identifiers for items on the destination side
+  # are not the same as the identifiers were on the source side. For example, in
+  # our style data the term names are the unique identifiers for each term,
+  # while in Drupal each term is assigned a unique integer term ID (tid). When
+  # any such items are referenced in Drupal, the reference needs to be
+  # translated from the old ID ('ale') to the new ID (1). The migration
+  # framework keeps track of the relationships between source and destination
+  # IDs in map tables, and the migration plugin is the means of performing a
+  # lookup in those map tables during processing.
+#  parent:
+#    plugin: migration
+    # Here we reference the migration whose map table we're performing a lookup
+    # against. You'll note that in this case we're actually referencing this
+    # migration itself, since category parents are imported by the same
+    # migration. This works best when we're sure the parents are imported
+    # before the children, and in this case our source plugin is guaranteeing
+    # that.
+#    migration: beer_term
+    # 'style_parent' is the parent reference field from the source data. The
+    # result of this plugin is that the destination 'parent' field is populated
+    # with the Drupal term ID of the referenced style (or NULL if style_parent
+    # was empty).
+#    source: style_parent
