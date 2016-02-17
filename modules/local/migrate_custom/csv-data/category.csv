@@ -1,2 +1,2 @@
-id,category
-1,"Test"
+id,category,category_parent
+1,"Test",NULL
