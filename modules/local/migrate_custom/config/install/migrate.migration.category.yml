@@ -14,6 +14,8 @@ source:
       id: Identifier
     1:
       category: Category
+    2:
+      category_parent: Category Parent
 
 destination:
   plugin: entity:taxonomy_term
@@ -33,7 +35,7 @@ process:
   # 'default_value:' line is an actual value.
   vid:
     plugin: default_value
-    default_value: migrate_custom_category
+    default_value: category
 
   # Here's another new plugin - migration. When importing data from another
   # system, typically the unique identifiers for items on the destination side
@@ -45,17 +47,17 @@ process:
   # framework keeps track of the relationships between source and destination
   # IDs in map tables, and the migration plugin is the means of performing a
   # lookup in those map tables during processing.
-#  parent:
-#    plugin: migration
+  parent:
+    plugin: migration
     # Here we reference the migration whose map table we're performing a lookup
     # against. You'll note that in this case we're actually referencing this
     # migration itself, since category parents are imported by the same
     # migration. This works best when we're sure the parents are imported
     # before the children, and in this case our source plugin is guaranteeing
     # that.
-#    migration: beer_term
+    migration: category
     # 'style_parent' is the parent reference field from the source data. The
     # result of this plugin is that the destination 'parent' field is populated
     # with the Drupal term ID of the referenced style (or NULL if style_parent
     # was empty).
-#    source: style_parent
+    source: category_parent
