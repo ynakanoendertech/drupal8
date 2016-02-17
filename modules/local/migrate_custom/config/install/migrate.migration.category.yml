@@ -31,9 +31,9 @@ process:
   # should be assigned to. It's important to note that while above the right
   # side of the mappings was a source field name, here the right side of the
   # 'default_value:' line is an actual value.
-#  vid:
-#    plugin: default_value
-#    default_value: migrate_example_beer_styles
+  vid:
+    plugin: default_value
+    default_value: migrate_custom_category
 
   # Here's another new plugin - migration. When importing data from another
   # system, typically the unique identifiers for items on the destination side
