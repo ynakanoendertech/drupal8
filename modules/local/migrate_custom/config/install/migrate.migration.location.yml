@@ -66,7 +66,8 @@ process:
     source: search_keywords
     vocabulary_name: tags
 
-#dependencies:
-#  module:
-#    - custom_migrate
+migration_dependencies:
+  required:
+    - category
+    - search_keywords
 
