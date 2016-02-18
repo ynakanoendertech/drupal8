@@ -36,6 +36,8 @@ source:
       eligibility: Eligibility
     11:
       how_best_to_access: How Best to Access
+    12:
+      category: Category
 
 destination:
   plugin: entity:node
@@ -55,6 +57,10 @@ process:
   field_services_contact: services_contact
   field_eligibility: eligibility
   field_how_best_to_access: how_best_to_access
+  field_catagory:
+    plugin: term_reference
+    source: category
+    vocabulary_name: category
 
 #dependencies:
 #  module:
