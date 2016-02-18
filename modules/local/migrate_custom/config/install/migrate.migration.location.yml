@@ -60,6 +60,7 @@ process:
   field_catagory:
     plugin: term_reference
     source: category
+    vocabulary_name: category
 
 #dependencies:
 #  module:
