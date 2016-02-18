@@ -61,6 +61,10 @@ process:
     plugin: term_reference
     source: category
     vocabulary_name: category
+  field_tags:
+    plugin: term_reference
+    source: search_keywords
+    vocabulary_name: tags
 
 #dependencies:
 #  module:
