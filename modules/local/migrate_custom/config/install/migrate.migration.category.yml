@@ -19,32 +19,15 @@ destination:
   plugin: entity:taxonomy_term
 
 process:
-  # The simplest process plugin is named 'get' - it is the default plugin, so
-  # does not need to be explicitly named. It simply copies the source value
-  # (the 'style' field from the source database in this case) to the destination
-  # field (the taxonomy term 'name' field). You can see we simply copy the
-  # source 'details' field to destination 'description' field in the same way.
+  # Destination table field name: Source field name
   name: category
-
-  # Here is a new plugin - default_value. In its simplest usage here, it is used
-  # to hard-code a destination value, the vid (vocabulary ID) our taxonomy terms
-  # should be assigned to. It's important to note that while above the right
-  # side of the mappings was a source field name, here the right side of the
-  # 'default_value:' line is an actual value.
+  # Destination field name 'vid'
   vid:
+    # Use default plugin to hard-code destination value
     plugin: default_value
+    # Default value for destination is 'category'
     default_value: category
-
-  # Here's another new plugin - migration. When importing data from another
-  # system, typically the unique identifiers for items on the destination side
-  # are not the same as the identifiers were on the source side. For example, in
-  # our style data the term names are the unique identifiers for each term,
-  # while in Drupal each term is assigned a unique integer term ID (tid). When
-  # any such items are referenced in Drupal, the reference needs to be
-  # translated from the old ID ('ale') to the new ID (1). The migration
-  # framework keeps track of the relationships between source and destination
-  # IDs in map tables, and the migration plugin is the means of performing a
-  # lookup in those map tables during processing.
+  # Set null for 'parent' destination field
   parent:
     plugin: default_value
     default_value: null
