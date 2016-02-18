@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \Drupal\migrate_custom\Plugin\migrate\source\TermReference.
+ * Contains \Drupal\migrate_custom\Plugin\migrate\process\TermReference.
  */
 
-namespace Drupal\migrate_custom\Plugin\migrate\source;
+namespace Drupal\migrate_custom\Plugin\migrate\process;
 
 use Drupal\taxonomy\TermStorageInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
