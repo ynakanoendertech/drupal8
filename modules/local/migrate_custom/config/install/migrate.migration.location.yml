@@ -38,6 +38,8 @@ source:
       how_best_to_access: How Best to Access
     12:
       category: Category
+    13:
+      search_keywords: Search Keywords
 
 destination:
   plugin: entity:node
