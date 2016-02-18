@@ -56,8 +56,8 @@ process:
   field_eligibility: eligibility
   field_how_best_to_access: how_best_to_access
   field_catagory:
-    plugin: migration
-    migration: term_reference
+    plugin: term_reference
+    name: category
     source: terms
 
 #dependencies:
