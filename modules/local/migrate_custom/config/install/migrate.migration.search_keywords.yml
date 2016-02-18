@@ -19,10 +19,15 @@ destination:
   plugin: entity:taxonomy_term
 
 process:
+  # Destination table field name: Source field name
   name: search_keywords
+  # Destination field name 'vid'
   vid:
+    # Use default plugin to hard-code destination value
     plugin: default_value
-    default_value: search_keywords
+    # Default value for destination is 'tags'
+    default_value: tags
+  # Set null for 'parent' destination field
   parent:
     plugin: default_value
     default_value: null
