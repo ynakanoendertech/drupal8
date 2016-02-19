@@ -45,25 +45,30 @@ class TermReference extends ProcessPluginBase implements ContainerFactoryPluginI
             $container->get('entity.manager')->getStorage('taxonomy_term')
         );
     }
+
     protected function getTermId($name) {
-        // Check vocabulary_name is specified
-        if (isset($this->configuration['vocabulary_name'])) {
-            $vocabulary_name = $this->configuration['vocabulary_name'];
-            if (!$this->terms) {
-                //$tids = $this->termStorage
-                //    ->getQuery()
-                //    ->condition('vid', $vocabulary_name)
-                //    ->execute();
-                //$terms = $this->termStorage->loadMultiple($tids);
-                $terms = $this->termStorage->loadTree($vocabulary_name, 0, NULL, TRUE);
+        // Generate $this->terms
+        if (!$this->terms) {
+            if (isset($this->configuration['vocabulary_name'])) {
+                $terms = $this->termStorage->loadTree($this->configuration['vocabulary_name'], 0, NULL, TRUE);
                 foreach ($terms as $term) {
-                    //$this->terms[$term->name->value] = $term->id();
                     $this->terms[$term->label()] = $term->id();
                 }
             }
         }
-        return $this->terms[$name];
+
+        if (strpos($name, '|') == false) {
+            $termId = $this->terms[$name];
+            return $termId;
+        } else {
+            $termIds = array();
+            foreach (explode('|', $name) as $n) {
+                $termIds[] = $this->terms[$n];
+            }
+            return $termIds;
+        }
     }
+
     /**
      * {@inheritdoc}
      */

@@ -38,6 +38,8 @@ source:
       how_best_to_access: How Best to Access
     12:
       category: Category
+    13:
+      search_keywords: Search Keywords
 
 destination:
   plugin: entity:node
@@ -61,8 +63,13 @@ process:
     plugin: term_reference
     source: category
     vocabulary_name: category
+  field_tags:
+    plugin: term_reference
+    source: search_keywords
+    vocabulary_name: tags
 
-#dependencies:
-#  module:
-#    - custom_migrate
+migration_dependencies:
+  required:
+    - category
+    - search_keywords
 
