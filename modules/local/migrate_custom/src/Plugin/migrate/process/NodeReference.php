@@ -48,7 +48,7 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
 
     protected function getNodeId($name) {
         // Generate $this->organizationNode
-        if (!$this->organizationNode) {
+        if (!$this->organizationNodes) {
             if (isset($this->configuration['content_type'])) {
                 $nids = $this->nodeStorage
                     ->getQuery()
@@ -56,11 +56,11 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
                     ->execute();
                 $nodes = $this->nodeStorage->loadMultiple($nids);
                 foreach ($nodes as $node) {
-                    $this->organizationNode[$node->label()] = $node->id();
+                    $this->organizationNodes[$node->name->value] = $node->id();
                 }
             }
         }
-        return $this->organizationNode[$name];
+        return $this->organizationNodes[$name];
     }
 
     /**
