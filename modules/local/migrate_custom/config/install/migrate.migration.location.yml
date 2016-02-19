@@ -72,4 +72,4 @@ migration_dependencies:
   required:
     - category
     - search_keywords
-
+    - organization
