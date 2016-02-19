@@ -50,21 +50,23 @@ class TermReference extends ProcessPluginBase implements ContainerFactoryPluginI
         // Generate $this->terms
         if (!$this->terms) {
             if (isset($this->configuration['vocabulary_name'])) {
-                $terms = $this->termStorage->loadTree($this->configuration['vocabulary_name'], 0, NULL, TRUE);
+                $terms = $this->termStorage
+                    ->loadTree($this->configuration['vocabulary_name'], 0, NULL, TRUE);
                 foreach ($terms as $term) {
                     $this->terms[$term->label()] = $term->id();
                 }
             }
         }
-
         if (strpos($name, '|') == false) {
             $termId = $this->terms[$name];
+            // Return single ID
             return $termId;
         } else {
             $termIds = array();
             foreach (explode('|', $name) as $n) {
                 $termIds[] = $this->terms[$n];
             }
+            // Return multiple IDs
             return $termIds;
         }
     }
