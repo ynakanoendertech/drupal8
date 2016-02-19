@@ -16,7 +16,7 @@ use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
 
 /**
- * Looks up a taxonomy term by title.
+ * Looks up a node by title.
  *
  * @MigrateProcessPlugin(
  *   id = "node_reference"
@@ -42,7 +42,7 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
             $plugin_id,
             $plugin_definition,
             $migration,
-            $container->get('entity.manager')->getStorage('taxonomy_term')
+            $container->get('entity.manager')->getStorage('node')
         );
     }
 
@@ -50,19 +50,12 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
         // Generate $this->organizationNode
         if (!$this->organizationNode) {
             if (isset($this->configuration['content_type'])) {
-
                 $nids = $this->nodeStorage
                     ->getQuery()
                     ->condition('type', $this->configuration['content_type'])
                     ->execute();
                 $nodes = $this->nodeStorage->loadMultiple($nids);
-
-                //$terms = $this->termStorage->loadTree($this->configuration['content_type'], 0, NULL, TRUE);
                 foreach ($nodes as $node) {
-                    echo "--------\n";
-                    echo $node->label() . "\n";
-                    echo $node->name->value . "\n";
-                    echo "========\n";
                     $this->organizationNode[$node->label()] = $node->id();
                 }
             }
