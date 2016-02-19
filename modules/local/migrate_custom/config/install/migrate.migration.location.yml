@@ -40,6 +40,8 @@ source:
       category: Category
     13:
       search_keywords: Search Keywords
+    14:
+      organization: Organization
 
 destination:
   plugin: entity:node
@@ -67,6 +69,10 @@ process:
     plugin: term_reference
     source: search_keywords
     vocabulary_name: tags
+  field_organization:
+    plugin: node_reference
+    souce: organization
+    content_type: organization
 
 migration_dependencies:
   required:
