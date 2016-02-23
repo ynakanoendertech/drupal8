@@ -71,7 +71,7 @@ process:
     vocabulary_name: tags
   field_organization:
     plugin: node_reference
-    souce: organization
+    source: organization
     content_type: organization
 
 migration_dependencies:
