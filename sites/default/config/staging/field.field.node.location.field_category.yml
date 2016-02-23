@@ -1,16 +1,16 @@
-uuid: d4558b01-b477-4768-8d00-c2b8281ca335
+uuid: ed4b41b5-3a0a-461d-9d00-ed11596b1acd
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_catagory
+    - field.storage.node.field_category
     - node.type.location
     - taxonomy.vocabulary.category
-id: node.location.field_catagory
-field_name: field_catagory
+id: node.location.field_category
+field_name: field_category
 entity_type: node
 bundle: location
-label: Catagory
+label: Category
 description: ''
 required: false
 translatable: false

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.location.field_catagory
+    - field.field.node.location.field_category
     - field.field.node.location.field_eligibility
     - field.field.node.location.field_how_best_to_access
     - field.field.node.location.field_location_address
@@ -30,7 +30,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_catagory: true
+  field_category: true
   field_eligibility: true
   field_how_best_to_access: true
   field_location_address: true

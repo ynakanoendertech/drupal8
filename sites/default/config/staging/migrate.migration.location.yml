@@ -1,4 +1,4 @@
-uuid: 6f498ae9-2532-4fd5-bc09-9f51da509c9d
+uuid: e1fd4b40-0fbe-4e7c-8151-81f9352338bd
 langcode: en
 status: true
 dependencies:
@@ -65,7 +65,7 @@ process:
   field_services_contact: services_contact
   field_eligibility: eligibility
   field_how_best_to_access: how_best_to_access
-  field_catagory:
+  field_category:
     plugin: term_reference
     source: category
     vocabulary_name: category
