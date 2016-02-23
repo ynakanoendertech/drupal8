@@ -1,0 +1,88 @@
+uuid: 6f498ae9-2532-4fd5-bc09-9f51da509c9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - migrate.migration.category
+    - migrate.migration.organization
+    - migrate.migration.search_keywords
+  module:
+    - migrate_source_csv
+    - node
+id: location
+migration_tags:
+  - CSV
+label: 'Import locations'
+source:
+  plugin: csv
+  path: /Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/location.csv
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: Identifier
+    -
+      location_name: 'Location Name'
+    -
+      location_url: 'Location URL'
+    -
+      location_zip: 'Location Zip'
+    -
+      location_address: 'Location Address'
+    -
+      room_number: 'Room Number'
+    -
+      location_phone: 'Location Phone'
+    -
+      locations_hours: 'Locations Hours'
+    -
+      services: Services
+    -
+      services_contact: 'Services Contact'
+    -
+      eligibility: Eligibility
+    -
+      how_best_to_access: "How Best\_to Access"
+    -
+      category: Category
+    -
+      search_keywords: 'Search Keywords'
+    -
+      organization: Organization
+process:
+  type:
+    plugin: default_value
+    default_value: location
+  title: location_name
+  field_location_url: location_url
+  field_location_zip: location_zip
+  field_location_address: location_address
+  field_room_number: room_number
+  field_location_phone: location_phone
+  field_location_hours: locations_hours
+  field_services: services
+  field_services_contact: services_contact
+  field_eligibility: eligibility
+  field_how_best_to_access: how_best_to_access
+  field_catagory:
+    plugin: term_reference
+    source: category
+    vocabulary_name: category
+  field_tags:
+    plugin: term_reference
+    source: search_keywords
+    vocabulary_name: tags
+  field_organization:
+    plugin: node_reference
+    source: organization
+    content_type: organization
+destination:
+  plugin: 'entity:node'
+template: null
+migration_dependencies:
+  required:
+    - category
+    - search_keywords
+    - organization
+migration_group: initial_data
