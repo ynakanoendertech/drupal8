@@ -1,6 +1,6 @@
-migration_group: initial_data
 id: location
 label: Import locations
+migration_group: initial_data
 migration_tags:
   - CSV
 source:
