@@ -1,0 +1,20 @@
+uuid: 5a1dee82-2ef0-4e3b-8d03-3d1a4145eacf
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - laoyc2016
+id: laoyc2016_messages
+theme: laoyc2016
+region: header
+weight: -50
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

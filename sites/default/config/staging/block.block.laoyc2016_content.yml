@@ -1,0 +1,20 @@
+uuid: 2c595c83-f0e5-4124-835b-91548c775cf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - laoyc2016
+id: laoyc2016_content
+theme: laoyc2016
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,20 @@
+uuid: 46aea628-6f5f-41b4-9600-f39340543dc6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - laoyc2016
+id: laoyc2016_local_tasks
+theme: laoyc2016
+region: header
+weight: 10
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

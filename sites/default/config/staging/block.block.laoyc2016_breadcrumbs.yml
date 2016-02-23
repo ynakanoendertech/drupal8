@@ -1,0 +1,20 @@
+uuid: 39c53905-f977-4e2e-9b00-c174aca628f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - laoyc2016
+id: laoyc2016_breadcrumbs
+theme: laoyc2016
+region: header
+weight: -100
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

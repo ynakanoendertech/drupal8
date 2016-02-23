@@ -1,0 +1,18 @@
+uuid: fba59cc9-2ca3-4237-a900-c76c848ae56d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - laoyc2016
+id: laoyc2016_page_title
+theme: laoyc2016
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

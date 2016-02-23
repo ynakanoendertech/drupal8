@@ -1,0 +1,20 @@
+uuid: 6fbd0d58-2543-413d-9e00-f7c5a230f1b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - laoyc2016
+id: laoyc2016_help
+theme: laoyc2016
+region: help
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
