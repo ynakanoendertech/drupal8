@@ -56,7 +56,7 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
                     ->execute();
                 $nodes = $this->nodeStorage->loadMultiple($nids);
                 foreach ($nodes as $node) {
-                    $this->organizationNodes[$node->name->value] = $node->id();
+                    $this->organizationNodes[$node->label()] = $node->id();
                 }
             }
         }
