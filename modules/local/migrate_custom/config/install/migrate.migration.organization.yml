@@ -1,7 +1,6 @@
+migration_group: initial_data
 id: organization
 label: Import orgaizations
-#migration_groups:
-#  - Organization import
 migration_tags:
   - CSV
 source:

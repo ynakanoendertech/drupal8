@@ -1,6 +1,6 @@
+migration_group: initial_data
 id: category
 label: Import Category entries from CSV to taxonomy terms
-#migration_group: beer
 migration_tags:
   - CSV
 source:
