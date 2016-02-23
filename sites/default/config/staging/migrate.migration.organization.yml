@@ -1,0 +1,47 @@
+uuid: 0a977c22-c387-4e22-8c2a-4276886ccdf0
+langcode: en
+status: true
+dependencies:
+  module:
+    - migrate_source_csv
+    - node
+id: organization
+migration_tags:
+  - CSV
+label: 'Import orgaizations'
+source:
+  plugin: csv
+  path: /Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/organization.csv
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    -
+      id: Identifier
+    -
+      organization: Organization
+    -
+      url: URL
+    -
+      zip: Zip
+    -
+      address: Address
+    -
+      phone: Phone
+    -
+      hours: Hours
+process:
+  type:
+    plugin: default_value
+    default_value: organization
+  title: organization
+  field_organization_url: url
+  field_organization_zip: zip
+  field_organization_address: address
+  field_organization_phone: phone
+  field_organization_hours: hours
+destination:
+  plugin: 'entity:node'
+template: null
+migration_dependencies: {  }
+migration_group: initial_data
