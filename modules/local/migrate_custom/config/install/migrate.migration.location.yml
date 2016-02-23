@@ -60,7 +60,7 @@ process:
   field_services_contact: services_contact
   field_eligibility: eligibility
   field_how_best_to_access: how_best_to_access
-  field_catagory:
+  field_category:
     plugin: term_reference
     source: category
     vocabulary_name: category

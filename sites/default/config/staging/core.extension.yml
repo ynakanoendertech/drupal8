@@ -23,7 +23,6 @@ module:
   link: 0
   menu_ui: 0
   migrate: 0
-  migrate_custom: 0
   migrate_plus: 0
   migrate_source_csv: 0
   migrate_tools: 0
