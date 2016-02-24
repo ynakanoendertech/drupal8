@@ -1,4 +1,4 @@
-uuid: e1fd4b40-0fbe-4e7c-8151-81f9352338bd
+uuid: 2b37420b-2cbe-442f-b101-1dbd4969fd29
 langcode: en
 status: true
 dependencies:
@@ -77,6 +77,9 @@ process:
     plugin: node_reference
     source: organization
     content_type: organization
+  status:
+    plugin: default_value
+    default_value: 0
 destination:
   plugin: 'entity:node'
 template: null

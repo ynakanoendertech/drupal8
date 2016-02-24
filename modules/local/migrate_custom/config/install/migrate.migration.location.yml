@@ -72,6 +72,9 @@ process:
     plugin: node_reference
     source: organization
     content_type: organization
+  status:
+    plugin: default_value
+    default_value: 0
 
 migration_dependencies:
   required:
