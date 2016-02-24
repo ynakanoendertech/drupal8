@@ -1,0 +1,47 @@
+/**
+ * LA OYC 2016 styles.
+ */
+
+// Variables import
+@import "../bootstrap/less/variables";
+
+// Media query samples
+@media (min-width: @grid-float-breakpoint) {}
+@media (max-width: @grid-float-breakpoint-max) {}
+
+// -------------------------------------
+// General
+// -------------------------------------
+
+// Text wrap long urls.
+.view-resource-guide {
+  .field--name-field-services {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    -ms-word-break: break-all;
+    word-break: break-word;
+
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+  }
+}
+
+// -------------------------------------
+// Nav
+// -------------------------------------
+
+// Add left padding to logo on mobile.
+@media (max-width: @grid-float-breakpoint-max) {
+  .logo {
+    padding-left: 15px;
+  }
+}
+
+// Navbar background.
+.navbar-default {
+  //background-image: url('../images/mobile-top-banner.jpg');
+}
