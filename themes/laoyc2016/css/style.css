@@ -6972,11 +6972,6 @@ p:last-child,
 /**
  * LA OYC 2016 styles.
  */
-@media (max-width: 767px) {
-  .logo {
-    padding-left: 15px;
-  }
-}
 .view-resource-guide .field--name-field-services {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -6987,4 +6982,9 @@ p:last-child,
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+@media (max-width: 767px) {
+  .logo {
+    padding-left: 15px;
+  }
 }
