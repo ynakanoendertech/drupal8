@@ -6972,9 +6972,9 @@ p:last-child,
 /**
  * LA OYC 2016 styles.
  */
-@media (min-width: 768px) {
-  .navbar-btn {
-    display: none;
+@media (max-width: 767px) {
+  .logo {
+    padding-left: 15px;
   }
 }
 .view-resource-guide .field--name-field-services {
