@@ -57,8 +57,6 @@ class NodeIdPathReference extends ProcessPluginBase implements ContainerFactoryP
                     ->execute();
                 $nodes = $this->nodeStorage->loadMultiple($nids);
                 foreach ($nodes as $node) {
-//                    error_log('getText: ' . $node->toLink()->getText());
-//                    error_log('toUrl: '. $node->toLink()->getUrl()->toString());
                     $this->matchedNodes[$node->label()] = $node->toLink()->getUrl()->toString();
                 }
             }
@@ -70,8 +68,6 @@ class NodeIdPathReference extends ProcessPluginBase implements ContainerFactoryP
      * {@inheritdoc}
      */
     public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-        error_log('-----');
-        error_log($value);
         return $this->getNodeLink($value);
     }
 
