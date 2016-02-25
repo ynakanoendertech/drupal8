@@ -5,7 +5,7 @@ migration_tags:
   - CSV
 source:
   plugin: csv
-  path: '/Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/category.csv'
+  path: '/Applications/MAMP/htdocs/drupal8a/modules/custom/migrate_custom/csv-data/category.csv'
   header_row_count: 1
   keys:
     - id
