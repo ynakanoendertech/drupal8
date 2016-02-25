@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains \Drupal\migrate_custom\Plugin\migrate\process\NodeReference.
+ * Contains \Drupal\migrate_custom\Plugin\migrate\process\NodeIdPathReference.
  */
 
 namespace Drupal\migrate_custom\Plugin\migrate\process;
@@ -16,13 +16,14 @@ use Drupal\migrate\MigrateExecutableInterface;
 use Drupal\migrate\Row;
 
 /**
- * Looks up a node by title.
+ * Looks up a node ID path by title.
+ * Note: This plugin picks up the first match of the title. If there are duplicate titles, the first one will be picked up.
  *
  * @MigrateProcessPlugin(
- *   id = "node_reference"
+ *   id = "node_id_path_reference"
  * )
  */
-class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginInterface {
+class NodeIdPathReference extends ProcessPluginBase implements ContainerFactoryPluginInterface {
 
     /**
      * {@inheritdoc}
@@ -46,7 +47,7 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
         );
     }
 
-    protected function getNodeId($name) {
+    protected function getNodeLink($name) {
         // Generate $this->organizationNode
         if (!$this->matchedNodes) {
             if (isset($this->configuration['content_type'])) {
@@ -56,7 +57,7 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
                     ->execute();
                 $nodes = $this->nodeStorage->loadMultiple($nids);
                 foreach ($nodes as $node) {
-                    $this->matchedNodes[$node->label()] = $node->id();
+                    $this->matchedNodes[$node->label()] = $node->toLink()->getUrl()->toString();
                 }
             }
         }
@@ -67,7 +68,7 @@ class NodeReference extends ProcessPluginBase implements ContainerFactoryPluginI
      * {@inheritdoc}
      */
     public function transform($value, MigrateExecutableInterface $migrate_executable, Row $row, $destination_property) {
-        return $this->getNodeId($value);
+        return $this->getNodeLink($value);
     }
 
 }
