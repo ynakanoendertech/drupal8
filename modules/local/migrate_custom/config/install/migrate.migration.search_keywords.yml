@@ -31,3 +31,8 @@ process:
   parent:
     plugin: default_value
     default_value: null
+
+migration_dependencies:
+  required:
+    # Force Home page (Basic page type) to have the node id 1 (/node/1/).
+    - basic_page

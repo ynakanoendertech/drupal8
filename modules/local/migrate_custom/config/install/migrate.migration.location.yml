@@ -78,6 +78,9 @@ process:
 
 migration_dependencies:
   required:
+    # Force Home page (Basic page type) to have the node id 1 (/node/1/).
+    - basic_page
+    # Location references these entieies.
     - category
     - search_keywords
     - organization
