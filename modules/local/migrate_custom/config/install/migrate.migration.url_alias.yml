@@ -34,4 +34,5 @@ process:
 
 migration_dependencies:
   required:
+    # URL alias needs Home page (Basic page type) already imported.
     - basic_page

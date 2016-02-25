@@ -38,3 +38,8 @@ process:
   field_organization_address: address
   field_organization_phone: phone
   field_organization_hours: hours
+
+migration_dependencies:
+  required:
+    # Force Home page (Basic page type) to have the node id 1 (/node/1/).
+    - basic_page
