@@ -1,7 +1,9 @@
-uuid: 88e417e8-ec81-45b0-bf07-7e2e06a9d453
+uuid: 01ced79f-4a15-4c60-8500-abc9eb534efb
 langcode: en
 status: true
 dependencies:
+  config:
+    - migrate.migration.basic_page
   module:
     - migrate_source_csv
     - taxonomy
@@ -11,7 +13,7 @@ migration_tags:
 label: 'Import Category entries from CSV to taxonomy terms'
 source:
   plugin: csv
-  path: /Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/category.csv
+  path: /Applications/MAMP/htdocs/drupal8a/modules/custom/migrate_custom/csv-data/category.csv
   header_row_count: 1
   keys:
     - id
@@ -31,5 +33,7 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
 template: null
-migration_dependencies: {  }
+migration_dependencies:
+  required:
+    - basic_page
 migration_group: initial_data

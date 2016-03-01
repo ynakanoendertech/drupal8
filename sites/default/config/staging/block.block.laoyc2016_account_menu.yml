@@ -11,7 +11,7 @@ dependencies:
 id: laoyc2016_account_menu
 theme: laoyc2016
 region: navigation_collapsible
-weight: 11
+weight: -8
 provider: null
 plugin: 'system_menu_block:account'
 settings:
