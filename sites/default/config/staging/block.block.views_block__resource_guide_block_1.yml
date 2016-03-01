@@ -1,0 +1,30 @@
+uuid: 7e5c46ab-7f1c-4f8e-a500-a5dd35f9f0f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resource_guide
+  module:
+    - system
+    - views
+  theme:
+    - laoyc2016
+id: views_block__resource_guide_block_1
+theme: laoyc2016
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:resource_guide-block_1'
+settings:
+  id: 'views_block:resource_guide-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: false
+    context_mapping: {  }
