@@ -1,11 +1,11 @@
-id: category
-label: Import Category entries from CSV to taxonomy terms
+id: search_keywords
+label: Import Search Keywords entries from CSV to taxonomy terms
 migration_group: initial_data
 migration_tags:
   - CSV
 source:
   plugin: csv
-  path: '/Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/category.csv'
+  path: '/Applications/MAMP/htdocs/drupal8a/modules/custom/migrate_custom/csv-data/search_keywords.csv'
   header_row_count: 1
   keys:
     - id
@@ -13,20 +13,20 @@ source:
     0:
       id: Identifier
     1:
-      category: Category
+      search_keywords: Search Keywords
 
 destination:
   plugin: entity:taxonomy_term
 
 process:
   # Destination table field name: Source field name
-  name: category
+  name: search_keywords
   # Destination field name 'vid'
   vid:
     # Use default plugin to hard-code destination value
     plugin: default_value
-    # Default value for destination is 'category'
-    default_value: category
+    # Default value for destination is 'tags'
+    default_value: tags
   # Set null for 'parent' destination field
   parent:
     plugin: default_value
