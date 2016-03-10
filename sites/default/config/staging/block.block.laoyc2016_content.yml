@@ -9,7 +9,7 @@ dependencies:
 id: laoyc2016_content
 theme: laoyc2016
 region: content
-weight: 0
+weight: -7
 provider: null
 plugin: system_main_block
 settings:

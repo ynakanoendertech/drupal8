@@ -1,0 +1,38 @@
+id: url_alias
+label: Import URL aliases
+migration_group: initial_data
+migration_tags:
+  - CSV
+source:
+  plugin: csv
+  path: '/Applications/MAMP/htdocs/drupal8a/modules/custom/migrate_custom/csv-data/url-alias.csv'
+  header_row_count: 1
+  keys:
+    - id
+  column_names:
+    0:
+      id: Identifier
+    1:
+      basic_page_title: Basic page title
+    2:
+      alias: URL alias
+    3:
+      langcode: Language code
+
+destination:
+  plugin: url_alias
+
+process:
+  source:
+    plugin: node_id_path_reference
+    source: basic_page_title
+    content_type: page
+  alias: alias
+  langcode:
+    plugin: default_value
+    default_value: en
+
+migration_dependencies:
+  required:
+    # URL alias needs Home page (Basic page type) already imported.
+    - basic_page

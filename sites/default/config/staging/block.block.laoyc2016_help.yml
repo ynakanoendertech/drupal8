@@ -9,7 +9,7 @@ dependencies:
 id: laoyc2016_help
 theme: laoyc2016
 region: help
-weight: -30
+weight: -8
 provider: null
 plugin: help_block
 settings:

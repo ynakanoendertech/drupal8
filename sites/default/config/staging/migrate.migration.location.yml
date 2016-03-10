@@ -1,8 +1,9 @@
-uuid: e1fd4b40-0fbe-4e7c-8151-81f9352338bd
+uuid: f5596de7-5d9b-4d3c-a404-4d5ab60f878d
 langcode: en
 status: true
 dependencies:
   config:
+    - migrate.migration.basic_page
     - migrate.migration.category
     - migrate.migration.organization
     - migrate.migration.search_keywords
@@ -15,7 +16,7 @@ migration_tags:
 label: 'Import locations'
 source:
   plugin: csv
-  path: /Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/location.csv
+  path: /Applications/MAMP/htdocs/drupal8a/modules/custom/migrate_custom/csv-data/location.csv
   header_row_count: 1
   keys:
     - id
@@ -77,11 +78,15 @@ process:
     plugin: node_reference
     source: organization
     content_type: organization
+  status:
+    plugin: default_value
+    default_value: 0
 destination:
   plugin: 'entity:node'
 template: null
 migration_dependencies:
   required:
+    - basic_page
     - category
     - search_keywords
     - organization
