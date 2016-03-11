@@ -17,4 +17,7 @@ bootstrap-scripts:
     bootstrap/js/scrollspy.js: {}
     bootstrap/js/tab.js: {}
     bootstrap/js/transition.js: {}
+    # AngularJS
     js/node_modules/angular/angular.js: {}
+    # Custom JS
+    js/resource-guide.js: {}
