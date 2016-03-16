@@ -1,7 +1,7 @@
 type: module
 name: Migrate Custom
 description: 'Custom Drupal 8 migraton.'
-package: Migration Custom
+package: LAOYC
 # core: 8.x
 dependencies:
   - migrate
