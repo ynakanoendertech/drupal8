@@ -1,6 +1,6 @@
 type: module
 name: Migrate Custom
-description: 'Custom Drupal 8 migraton.'
+description: 'Import initial data set - category, search keywords, location, and organization.'
 package: LAOYC
 # core: 8.x
 dependencies:
