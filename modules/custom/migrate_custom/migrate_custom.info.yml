@@ -1,12 +1,11 @@
 type: module
 name: Migrate Custom
 description: 'Import initial data set - category, search keywords, location, and organization.'
+core: '8.x'
 package: LAOYC
-# core: 8.x
+version: '8.x-1.0-beta1'
+project: 'migrate_custom'
 dependencies:
   - migrate
   - migrate_plus
 
-version: '8.x-1.0-beta1'
-core: '8.x'
-project: 'migrate_custom'
