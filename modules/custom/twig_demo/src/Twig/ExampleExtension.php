@@ -8,7 +8,7 @@ class ExampleExtension extends \Twig_Extension {
         return 'example';
     }
 
-    public function getFunction() {
+    public function getFunctions() {
         return array(
             new \Twig_SimpleFunction(
                 'gravatar', array($this, 'generateGravatarUrl')
