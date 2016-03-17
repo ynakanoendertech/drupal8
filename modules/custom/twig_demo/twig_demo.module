@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains custom_twig_extension.module..
+ * Contains twig_demo.module..
  */
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,13 +10,13 @@ use Drupal\Core\Routing\RouteMatchInterface;
 /**
  * Implements hook_help().
  */
-function custom_twig_extension_help($route_name, RouteMatchInterface $route_match) {
+function twig_demo_help($route_name, RouteMatchInterface $route_match) {
   switch ($route_name) {
     // Main module help for the custom_twig_extension module.
-    case 'help.page.custom_twig_extension':
+    case 'help.page.twig_demo':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('Custom Twig Extension') . '</p>';
+      $output .= '<p>' . t('Twig Demo') . '</p>';
       return $output;
 
     default:
