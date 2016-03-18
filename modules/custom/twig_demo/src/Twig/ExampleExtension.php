@@ -27,32 +27,24 @@ class ExampleExtension extends \Twig_Extension {
     }
 
     public function myFunction($content) {
-        $outputArray = array();
+        $nodes = array();
 
-        foreach($content as $key1 => $value1) {
-            if ($key1 == '#view') {
-                foreach($value1 as $key2 => $value2) {
-                    if ($key2 == 'result') {
-                        foreach($value2 as $key3 => $value3) {
+        foreach($content['#view']->result as $key3 => $value3) {
 
-                            $nodeFields = array();
+            $fields = array();
 
-                            foreach($value3 as $key4 => $value4) {
-                                if ($key4 == '_entity') {
-                                    foreach($value4 as $key5 => $value5) {
-                                        $nodeFields[] = array($key5 => $value5->getValue());
-                                    }
-                                }
-                            }
-
-                            $outputArray[] = $nodeFields;
-                        }
+            foreach($value3 as $key4 => $value4) {
+                if ($key4 == '_entity') {
+                    foreach($value4 as $key5 => $value5) {
+                        $fields[] = array($key5 => $value5->getValue());
                     }
                 }
             }
+
+            $nodes[] = $fields;
         }
 
-        $output = json_encode($outputArray);
+        $output = json_encode($nodes);
 
         return $output;
     }
