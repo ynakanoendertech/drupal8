@@ -57,7 +57,10 @@
   </p>
 
   {% block content %}
-    {{ content }}
+    <pre>
+      {{ my_function(content) }}
+    </pre>
+    {#{{ dump(content['#view'].result[0]) }}#}
   {% endblock %}
 </section>
 
