@@ -53,7 +53,9 @@
   {{ title_suffix }}
 
   {% block content %}
-    {{ content }}
+    <script>
+      var resourceGuideJson = "{{ json_encode_view(content) }}";
+    </script>
   {% endblock %}
 </section>
 
