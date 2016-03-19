@@ -2,10 +2,10 @@
 
 namespace Drupal\twig_demo\Twig;
 
-class ExampleExtension extends \Twig_Extension {
+class CustomTwigExtension extends \Twig_Extension {
 
     public function getName() {
-        return 'example';
+        return 'custom_twig_extension';
     }
 
     public function getFunctions() {

@@ -1,5 +1,5 @@
 services:
-  twig.example_extension:
-    class: Drupal\twig_demo\Twig\ExampleExtension
+  twig.custom_twig_extension:
+    class: Drupal\twig_demo\Twig\CustomTwigExtension
     tags:
       - { name: twig.extension }
