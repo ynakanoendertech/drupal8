@@ -11,9 +11,6 @@ class ExampleExtension extends \Twig_Extension {
     public function getFunctions() {
         return array(
             new \Twig_SimpleFunction(
-                'gravatar', array($this, 'generateGravatarUrl')
-            ),
-            new \Twig_SimpleFunction(
                 'json_encode_view', array($this, 'jsonEncodeView')
             ),
         );
