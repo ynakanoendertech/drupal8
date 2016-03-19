@@ -2,7 +2,7 @@
 
 namespace Drupal\custom_twig_extension\Twig;
 
-class CustomTwigExtension extends \Twig_Extension {
+class MyCustomTwigExtension extends \Twig_Extension {
 
     public function getName() {
         return 'custom_twig_extension';
