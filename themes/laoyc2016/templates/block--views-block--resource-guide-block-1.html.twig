@@ -52,10 +52,6 @@
   {% endif %}
   {{ title_suffix }}
 
-  <p>
-    <img src="{{ gravatar('gerry@king-foo.be', 50) }}">
-  </p>
-
   {% block content %}
     <pre>
       {{ json_encode_view(content) }}

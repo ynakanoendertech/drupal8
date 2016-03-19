@@ -19,13 +19,6 @@ class ExampleExtension extends \Twig_Extension {
         );
     }
 
-    public function generateGravatarUrl($email, $size = 100) {
-        return sprintf('http://www.gravatar.com/avatar/%s?s=%s',
-            md5($email),
-            $size
-        );
-    }
-
     public function jsonEncodeView($content) {
         $nodes = array();
         foreach($content['#view']->result as $key3 => $value3) {
