@@ -1,7 +1,0 @@
-name: Twig Demo
-type: module
-description: Twig Demo
-core: 8.x
-package: LAOYC
-version: '8.x-1.0-beta1'
-project: 'twig_demo'

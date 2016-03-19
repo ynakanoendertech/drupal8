@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\twig_demo\Twig;
+namespace Drupal\custom_twig_extension\Twig;
 
 class CustomTwigExtension extends \Twig_Extension {
 
