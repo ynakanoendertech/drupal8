@@ -58,7 +58,7 @@
 
   {% block content %}
     <pre>
-      {{ my_function(content) }}
+      {{ json_encode_view(content) }}
     </pre>
     {#{{ dump(content['#view'].result[0]) }}#}
   {% endblock %}

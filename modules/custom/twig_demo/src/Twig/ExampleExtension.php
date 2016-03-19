@@ -14,7 +14,7 @@ class ExampleExtension extends \Twig_Extension {
                 'gravatar', array($this, 'generateGravatarUrl')
             ),
             new \Twig_SimpleFunction(
-                'my_function', array($this, 'myFunction')
+                'json_encode_view', array($this, 'jsonEncodeView')
             ),
         );
     }
@@ -26,13 +26,10 @@ class ExampleExtension extends \Twig_Extension {
         );
     }
 
-    public function myFunction($content) {
+    public function jsonEncodeView($content) {
         $nodes = array();
-
         foreach($content['#view']->result as $key3 => $value3) {
-
             $fields = array();
-
             foreach($value3 as $key4 => $value4) {
                 if ($key4 == '_entity') {
                     foreach($value4 as $key5 => $value5) {
@@ -40,12 +37,9 @@ class ExampleExtension extends \Twig_Extension {
                     }
                 }
             }
-
             $nodes[] = $fields;
         }
-
         $output = json_encode($nodes);
-
         return $output;
     }
 }
