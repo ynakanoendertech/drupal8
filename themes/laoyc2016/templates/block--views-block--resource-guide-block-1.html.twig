@@ -55,7 +55,7 @@
 
   {% block content %}
     <script>
-      var resourceGuideJson = "{{ json_encode_view(content) }}";
+      var resourceGuideJson = "{{ json_encode_view(content) }}"; {# Pass JSON data to AngularJS controller #}
     </script>
   {% endblock %}
 </section>
