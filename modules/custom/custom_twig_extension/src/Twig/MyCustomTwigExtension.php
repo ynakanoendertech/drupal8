@@ -4,6 +4,40 @@ namespace Drupal\custom_twig_extension\Twig;
 
 class MyCustomTwigExtension extends \Twig_Extension {
 
+    private $fieldList = array(
+        'nid',
+        //'uuid',
+        //'vid',
+        'type',
+        //'langcode',
+        'title',
+        //'uid',
+        'status',
+        //'created',
+        //'changed',
+        //'promote',
+        //'sticky',
+        //'revision_timestamp',
+        //'revision_uid',
+        //'revision_log',
+        //'revision_translation_affected',
+        //'default_langcode',
+        //'path',
+        'field_category',
+        'field_eligibility',
+        'field_how_best_to_access',
+        'field_location_address',
+        'field_location_hours',
+        'field_location_phone',
+        'field_location_url',
+        'field_location_zip',
+        'field_organization',
+        'field_room_number',
+        'field_services',
+        'field_services_contact',
+        'field_tags',
+    );
+
     public function getName() {
         return 'custom_twig_extension';
     }
@@ -23,7 +57,7 @@ class MyCustomTwigExtension extends \Twig_Extension {
             foreach($value3 as $key4 => $value4) {
                 if ($key4 == '_entity') {
                     foreach($value4 as $key5 => $value5) {
-                        $fields[] = array($key5 => $value5->getValue());
+                        $fields[$key5] = $value5->getValue();
                     }
                 }
             }
