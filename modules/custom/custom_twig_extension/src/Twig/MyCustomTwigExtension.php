@@ -80,7 +80,7 @@ class MyCustomTwigExtension extends \Twig_Extension {
                             case 'field_organization':
                             case 'field_category':
                             case 'field_tags':
-                            $fields[$key5] = $value5->getString();
+                                $fields[$key5] = $value5->getString();
                                 break;
 
                             // Fields to be skipped
