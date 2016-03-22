@@ -4,7 +4,7 @@ namespace Drupal\custom_twig_extension\Twig;
 
 class MyCustomTwigExtension extends \Twig_Extension {
 
-    private $fieldList = array(
+    protected $fieldList = array(
         'nid',
         //'uuid',
         //'vid',
@@ -57,7 +57,10 @@ class MyCustomTwigExtension extends \Twig_Extension {
             foreach($value3 as $key4 => $value4) {
                 if ($key4 == '_entity') {
                     foreach($value4 as $key5 => $value5) {
-                        $fields[$key5] = $value5->getValue();
+                        // Filter with allowed field list
+                        if (in_array($key5, $this->fieldList)) {
+                            $fields[$key5] = $value5->getValue();
+                        }
                     }
                 }
             }
