@@ -46,17 +46,20 @@
  */
 #}
 {{ attach_library('laoyc2016/angularjs-scripts') }}
-<section{{ attributes.addClass('block', 'clearfix') }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-
-  {% block content %}
-    <script>
-      var resourceGuideJson = "{{ json_encode_view(content) }}"; {# Pass JSON data to AngularJS controller #}
-    </script>
-  {% endblock %}
+{% block content %}
+  <script>
+    var resourceGuideJSON = "{{ json_encode_view(content) }}"; {# Pass JSON data to AngularJS controller #}
+  </script>
+{% endblock %}
+<section{{ attributes.addClass('block', 'clearfix', 'resource-guide-list') }} ng-app="myApp" ng-controller="myCtrl">
+  <div class="row">
+    <div class="col-sm-12">
+      {{ title_prefix }}
+      {% if label %}
+        <h2{{ title_attributes.addClass('block-title') }}>{{ label }}</h2>
+      {% endif %}
+      {{ title_suffix }}
+    </div>
+  </div>
 </section>
 
