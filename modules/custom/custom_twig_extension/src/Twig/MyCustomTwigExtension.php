@@ -43,76 +43,80 @@ class MyCustomTwigExtension extends \Twig_Extension {
      */
     public function jsonEncodeLocationView($content) {
         $nodes = array();
-        foreach($content['#view']->result as $key3 => $value3) {
-            $fields = array();
-            foreach($value3 as $key4 => $value4) {
-                if ($key4 == '_entity') {
-                    foreach($value4 as $key5 => $value5) {
 
-                        switch ($key5) {
+        if (is_array($content['#view']->result)) {
+            foreach($content['#view']->result as $key3 => $value3) {
+                $fields = array();
+                foreach($value3 as $key4 => $value4) {
+                    if ($key4 == '_entity') {
+                        foreach($value4 as $key5 => $value5) {
 
-                            // Simple fields
-                            case 'nid':
-                            case 'type':
-                            case 'status':
-                            case 'title':
-                            case 'field_location_zip':
-                            case 'field_room_number':
-                            case 'field_location_url':
-                                $fields[$key5] = $value5->getString();
-                                break;
+                            switch ($key5) {
 
-                            // HTML fields
-                            case 'field_eligibility':
-                            case 'field_how_best_to_access':
-                            case 'field_location_address':
-                            case 'field_location_hours':
-                            case 'field_location_phone':
-                            case 'field_services':
-                            case 'field_services_contact':
-                                $fieldValueData = $value5->getValue();
-                                if (isset( $fieldValueData[0]['value'] )) {
-                                    $fields[$key5] = $this->removeNewlineCharacters( $fieldValueData[0]['value'] );
-                                }
-                                break;
+                                // Simple fields
+                                case 'nid':
+                                case 'type':
+                                case 'status':
+                                case 'title':
+                                case 'field_location_zip':
+                                case 'field_room_number':
+                                case 'field_location_url':
+                                    $fields[$key5] = $value5->getString();
+                                    break;
 
-                            // Multi value fields
-                            case 'field_organization':
-                            case 'field_category':
-                            case 'field_tags':
-                                $fieldValueData = $value5->getValue();
-                                $fieldValueArray = array();
-                                if (is_array( $fieldValueData )) {
-                                    foreach ($fieldValueData as $f) {
-                                        $fieldValueArray[] = (isset( $f['target_id'] )) ? $f['target_id'] : '';
+                                // HTML fields
+                                case 'field_eligibility':
+                                case 'field_how_best_to_access':
+                                case 'field_location_address':
+                                case 'field_location_hours':
+                                case 'field_location_phone':
+                                case 'field_services':
+                                case 'field_services_contact':
+                                    $fieldValueData = $value5->getValue();
+                                    if (isset( $fieldValueData[0]['value'] )) {
+                                        $fields[$key5] = $this->removeNewlineCharacters( $fieldValueData[0]['value'] );
                                     }
-                                }
-                                $fields[$key5] = $fieldValueArray;
-                                break;
+                                    break;
 
-                            // Fields to be skipped
-                            case 'uuid':
-                            case 'vid':
-                            case 'langcode':
-                            case 'uid':
-                            case 'created':
-                            case 'changed':
-                            case 'promote':
-                            case 'sticky':
-                            case 'revision_timestamp':
-                            case 'revision_uid':
-                            case 'revision_log':
-                            case 'revision_translation_affected':
-                            case 'default_langcode':
-                            case 'path':
-                                break;
+                                // Multi value fields
+                                case 'field_organization':
+                                case 'field_category':
+                                case 'field_tags':
+                                    $fieldValueData = $value5->getValue();
+                                    $fieldValueArray = array();
+                                    if (is_array( $fieldValueData )) {
+                                        foreach ($fieldValueData as $f) {
+                                            $fieldValueArray[] = (isset( $f['target_id'] )) ? $f['target_id'] : '';
+                                        }
+                                    }
+                                    $fields[$key5] = $fieldValueArray;
+                                    break;
+
+                                // Fields to be skipped
+                                case 'uuid':
+                                case 'vid':
+                                case 'langcode':
+                                case 'uid':
+                                case 'created':
+                                case 'changed':
+                                case 'promote':
+                                case 'sticky':
+                                case 'revision_timestamp':
+                                case 'revision_uid':
+                                case 'revision_log':
+                                case 'revision_translation_affected':
+                                case 'default_langcode':
+                                case 'path':
+                                    break;
+                            }
+
                         }
-
                     }
                 }
+                $nodes[] = $fields;
             }
-            $nodes[] = $fields;
         }
+
         $output = json_encode($nodes);
         return $output;
     }
