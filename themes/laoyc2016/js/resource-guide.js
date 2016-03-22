@@ -1,11 +1,12 @@
 (function() {
 
-    "use strict";
+  "use strict";
 
-//    var app = angular.module('myApp', []);
-//
-//    app.controller('myCtrl', function($scope) {
-//        $scope.resourceGuideData = resourceGuideData;
-//    });
-    console.log(111);
+  var app = angular.module('myApp', []);
+
+  app.controller('myCtrl', function($scope) {
+    $scope.resourceGuideData = JSON.parse(resourceGuideJSON.replace(/&quot;/g,'"'));
+    console.dir($scope.resourceGuideData);
+  });
+
 })();
