@@ -80,7 +80,14 @@ class MyCustomTwigExtension extends \Twig_Extension {
                             case 'field_organization':
                             case 'field_category':
                             case 'field_tags':
-                                $fields[$key5] = $value5->getString();
+                                $fieldValueData = $value5->getValue();
+                                $fieldValueArray = array();
+                                if (is_array( $fieldValueData )) {
+                                    foreach ($fieldValueData as $f) {
+                                        $fieldValueArray[] = (isset( $f['target_id'] )) ? $f['target_id'] : '';
+                                    }
+                                }
+                                $fields[$key5] = $fieldValueArray;
                                 break;
 
                             // Fields to be skipped
