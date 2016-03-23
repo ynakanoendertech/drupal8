@@ -106,6 +106,7 @@ class MyCustomTwigExtension extends \Twig_Extension {
                                         foreach ($orgs as $org) {
                                             $linkUrl = Url::fromRoute('entity.node.canonical', array('node' => $org->id()));
                                             $orgLinks[] = array(
+                                                'id' => $org->id(),
                                                 'title' => $org->label(),
                                                 'url' => $linkUrl->toString(),
                                             );
@@ -117,6 +118,7 @@ class MyCustomTwigExtension extends \Twig_Extension {
                                         foreach ($terms as $term) {
                                             $linkUrl = Url::fromRoute('entity.taxonomy_term.canonical', array('taxonomy_term' => $term->id()));
                                             $termLinks[] = array(
+                                                'id' => $term->id(),
                                                 'title' => $term->label(),
                                                 'url' => $linkUrl->toString(),
                                             );
