@@ -101,6 +101,7 @@ class MyCustomTwigExtension extends \Twig_Extension {
                                         }
                                     }
                                     if ($key5 == 'field_organization') {
+                                        // Find organization from node storage
                                         $orgs = $this->nodeStorage->loadMultiple($ids);
                                         $orgLinks = array();
                                         foreach ($orgs as $org) {
@@ -113,6 +114,7 @@ class MyCustomTwigExtension extends \Twig_Extension {
                                         }
                                         $fields[$key5] = $orgLinks;
                                     } else {
+                                        // Find category/search-keywords from term storage
                                         $terms = $this->termStorage->loadMultiple($ids);
                                         $termLinks = array();
                                         foreach ($terms as $term) {
