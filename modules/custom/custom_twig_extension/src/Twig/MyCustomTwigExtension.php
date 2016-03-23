@@ -2,7 +2,20 @@
 
 namespace Drupal\custom_twig_extension\Twig;
 
+use \Drupal\Core\Url;
+
 class MyCustomTwigExtension extends \Twig_Extension {
+
+    protected $termStorage;
+    protected $nodeStorage;
+
+    /**
+     * {@inheritdoc}
+     */
+    public function __construct() {
+        $this->termStorage = \Drupal::entityManager()->getStorage('taxonomy_term');
+        $this->nodeStorage = \Drupal::entityManager()->getStorage('node');
+    }
 
     /**
      * {@inheritdoc}
@@ -72,9 +85,8 @@ class MyCustomTwigExtension extends \Twig_Extension {
                                 case 'field_location_phone':
                                 case 'field_services':
                                 case 'field_services_contact':
-                                    $fieldValueData = $value5->getValue();
-                                    if (isset( $fieldValueData[0]['value'] )) {
-                                        $fields[$key5] = $this->removeNewlineCharacters( $fieldValueData[0]['value'] );
+                                    if (isset( $value5->getValue()[0]['value'] )) {
+                                        $fields[$key5] = $this->removeNewlineCharacters( $value5->getValue()[0]['value'] );
                                     }
                                     break;
 
@@ -82,14 +94,35 @@ class MyCustomTwigExtension extends \Twig_Extension {
                                 case 'field_organization':
                                 case 'field_category':
                                 case 'field_tags':
-                                    $fieldValueData = $value5->getValue();
-                                    $fieldValueArray = array();
-                                    if (is_array( $fieldValueData )) {
-                                        foreach ($fieldValueData as $f) {
-                                            $fieldValueArray[] = (isset( $f['target_id'] )) ? $f['target_id'] : '';
+                                    $ids = array();
+                                    if (is_array($value5->getValue())) {
+                                        foreach ($value5->getValue() as $ref_entity) {
+                                            $ids[] = (isset( $ref_entity['target_id'] )) ? $ref_entity['target_id'] : '';
                                         }
                                     }
-                                    $fields[$key5] = $fieldValueArray;
+                                    if ($key5 == 'field_organization') {
+                                        $orgs = $this->nodeStorage->loadMultiple($ids);
+                                        $orgLinks = array();
+                                        foreach ($orgs as $org) {
+                                            $linkUrl = Url::fromRoute('entity.node.canonical', array('node' => $org->id()));
+                                            $orgLinks[] = array(
+                                                'title' => $org->label(),
+                                                'url' => $linkUrl->toString(),
+                                            );
+                                        }
+                                        $fields[$key5] = $orgLinks;
+                                    } else {
+                                        $terms = $this->termStorage->loadMultiple($ids);
+                                        $termLinks = array();
+                                        foreach ($terms as $term) {
+                                            $linkUrl = Url::fromRoute('entity.taxonomy_term.canonical', array('taxonomy_term' => $term->id()));
+                                            $termLinks[] = array(
+                                                'title' => $term->label(),
+                                                'url' => $linkUrl->toString(),
+                                            );
+                                        }
+                                        $fields[$key5] = $termLinks;
+                                    }
                                     break;
 
                                 // Fields to be skipped
