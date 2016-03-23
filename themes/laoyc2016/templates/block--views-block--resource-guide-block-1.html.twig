@@ -61,5 +61,16 @@
       {{ title_suffix }}
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <div ng-repeat="x in resourceGuideData">
+        <div class="abc123">
+          {% verbatim %}
+            {{ x.title }}
+          {% endverbatim %}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
