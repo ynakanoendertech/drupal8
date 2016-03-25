@@ -69,25 +69,37 @@
         <div>
           <a href="{{ x.url }}">{{ x.title }}</a>
         </div>
-        <div>
+        <div class="location-url-container">
+          <i class="fa fa-external-link-square" title="Url"></i>
+          <span class="hidden-xs">URL:</span>
           <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
         </div>
         <div class="organization-container">
+          <i class="fa fa-university" title="Organization"></i>
+          <span class="hidden-xs">Organization:</span>
           <ul ng-repeat="org in x.field_organization">
             <li><a href="{{ org.url }}">{{ org.title }}</a></li>
           </ul>
         </div>
         <div class="category-container">
+          <i class="fa fa-star" title="Category"></i>
+          <span class="hidden-xs">Category:</span>
           <ul ng-repeat="cat in x.field_category">
             <li>{{ cat.title }}</li>
           </ul>
         </div>
         <div class="search-keywords-container">
+          <i class="fa fa-tags" title="Search Keywords"></i>
+          <span class="hidden-xs">Search Keywords:</span>
           <ul ng-repeat="sk in x.field_tags">
             <li>{{ sk.title }}</li>
           </ul>
         </div>
-        <div ng-bind-html="x.field_location_address"></div>
+        <div class="address-container">
+          <i class="fa fa-car" title="Organization"></i>
+          <span class="hidden-xs">Address:</span>
+          <div ng-bind-html="x.field_location_address"></div>
+        </div>
         <div>{{ x.field_location_zip }}</div>
         <div>{{ x.field_room_number }}</div>
         <div ng-bind-html="x.field_location_phone"></div>
