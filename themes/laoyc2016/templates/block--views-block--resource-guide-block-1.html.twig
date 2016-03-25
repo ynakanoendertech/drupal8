@@ -66,9 +66,17 @@
   <div class="row">
     <div class="col-sm-12">
       <div ng-repeat="x in resourceGuideData" class="location">
-        <div class="abc123">
-            {{ x.title }}
-        </div>
+        <div>{{ x.title }}</div>
+        <div>{{ x.field_location_url }}</div>
+        <div>{{ x.field_location_zip }}</div>
+        <div ng-bind-html="x.field_location_address"></div>
+        <div>{{ x.field_room_number }}</div>
+        <div ng-bind-html="x.field_location_phone"></div>
+        <div ng-bind-html="x.field_location_hours"></div>
+        <div ng-bind-html="x.field_services"></div>
+        <div ng-bind-html="x.field_services_contact"></div>
+        <div ng-bind-html="x.field_eligibility"></div>
+        <div ng-bind-html="x.field_how_best_to_access"></div>
       </div>
     </div>
   </div>

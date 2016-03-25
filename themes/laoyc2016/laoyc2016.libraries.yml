@@ -22,5 +22,6 @@ angularjs-scripts:
   js:
     # AngularJS
     js/node_modules/angular/angular.js: {}
+    js/node_modules/angular-sanitize/angular-sanitize.js: {}
     # Custom JS
     js/resource-guide.js: {}
