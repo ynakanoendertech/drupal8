@@ -72,6 +72,15 @@
         <div>
           <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
         </div>
+        <div ng-repeat="org in x.field_organization" class="organization">
+          {{ org.title }}
+        </div>
+        <div ng-repeat="cat in x.field_category" class="category">
+          {{ cat.title }}
+        </div>
+        <div ng-repeat="sk in x.field_tags" class="search-keywords">
+          {{ sk.title }}
+        </div>
         <div ng-bind-html="x.field_location_address"></div>
         <div>{{ x.field_location_zip }}</div>
         <div>{{ x.field_room_number }}</div>
@@ -81,15 +90,6 @@
         <div ng-bind-html="x.field_services_contact"></div>
         <div ng-bind-html="x.field_eligibility"></div>
         <div ng-bind-html="x.field_how_best_to_access"></div>
-        <div ng-repeat="cat in x.field_category" class="category">
-          {{ cat.title }}
-        </div>
-        <div ng-repeat="sk in x.field_tags" class="search-keywords">
-          {{ sk.title }}
-        </div>
-        <div ng-repeat="org in x.field_organization" class="organization">
-          {{ org.title }}
-        </div>
       </div>
     </div>
   </div>
