@@ -52,3 +52,10 @@
 *.phar    -text diff
 *.exe     -text diff
 *.ttf     -text diff
+# Define Font Awesome font files as binary files
+*.otf binary
+*.eot binary
+*.svg binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
