@@ -73,7 +73,7 @@
           <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
         </div>
         <div ng-repeat="org in x.field_organization" class="organization">
-          {{ org.title }}
+          <a href="{{ org.url }}">{{ org.title }}</a>
         </div>
         <div ng-repeat="cat in x.field_category" class="category">
           {{ cat.title }}
