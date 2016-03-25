@@ -1,6 +1,7 @@
 global-styling:
   css:
     theme:
+      css/font-awesome.min.css: {}
       css/style.css: {}
 
 bootstrap-scripts:
