@@ -72,14 +72,20 @@
         <div>
           <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
         </div>
-        <div ng-repeat="org in x.field_organization" class="organization">
-          <a href="{{ org.url }}">{{ org.title }}</a>
+        <div class="organization-container">
+          <ul ng-repeat="org in x.field_organization">
+            <li><a href="{{ org.url }}">{{ org.title }}</a></li>
+          </ul>
         </div>
-        <div ng-repeat="cat in x.field_category" class="category">
-          {{ cat.title }}
+        <div class="category-container">
+          <ul ng-repeat="cat in x.field_category">
+            <li>{{ cat.title }}</li>
+          </ul>
         </div>
-        <div ng-repeat="sk in x.field_tags" class="search-keywords">
-          {{ sk.title }}
+        <div class="search-keywords-container">
+          <ul ng-repeat="sk in x.field_tags">
+            <li>{{ sk.title }}</li>
+          </ul>
         </div>
         <div ng-bind-html="x.field_location_address"></div>
         <div>{{ x.field_location_zip }}</div>
