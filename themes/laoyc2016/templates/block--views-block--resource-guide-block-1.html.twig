@@ -66,7 +66,9 @@
   <div class="row">
     <div class="col-sm-12">
       <div ng-repeat="x in resourceGuideData" class="location">
-        <div>{{ x.title }}</div>
+        <div>
+          <a href="{{ x.url }}">{{ x.title }}</a>
+        </div>
         <div>{{ x.field_location_url }}</div>
         <div>{{ x.field_location_zip }}</div>
         <div ng-bind-html="x.field_location_address"></div>

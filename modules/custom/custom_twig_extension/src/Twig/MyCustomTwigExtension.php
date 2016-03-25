@@ -66,8 +66,16 @@ class MyCustomTwigExtension extends \Twig_Extension {
 
                             switch ($key5) {
 
-                                // Simple fields
+                                // Location node id and target link
                                 case 'nid':
+                                    // Add nid to JSON data
+                                    $fields[$key5] = $value5->getString();
+                                    // Add target link
+                                    $linkUrl = Url::fromRoute('entity.node.canonical', array('node' => $value5->getString()));
+                                    $fields['url'] = $linkUrl->toString();
+                                    break;
+
+                                // Simple fields
                                 case 'type':
                                 case 'status':
                                 case 'title':
