@@ -50,7 +50,7 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
   field_location_hours:
     weight: 5
     label: above
