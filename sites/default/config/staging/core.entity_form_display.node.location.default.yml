@@ -59,7 +59,7 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+    type: string_textarea
   field_location_hours:
     weight: 6
     settings:
