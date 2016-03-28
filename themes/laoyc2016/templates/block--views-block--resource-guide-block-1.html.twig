@@ -77,37 +77,61 @@
         <div class="organization-container">
           <i class="fa fa-university" title="Organization"></i>
           <span class="hidden-xs">Organization:</span>
-          <ul ng-repeat="org in x.field_organization">
-            <li><a href="{{ org.url }}">{{ org.title }}</a></li>
+          <ul>
+            <li ng-repeat="org in x.field_organization">
+              <a href="{{ org.url }}">{{ org.title }}</a>
+            </li>
           </ul>
         </div>
         <div class="category-container">
           <i class="fa fa-star" title="Category"></i>
           <span class="hidden-xs">Category:</span>
-          <ul ng-repeat="cat in x.field_category">
-            <li>{{ cat.title }}</li>
+          <ul>
+            <li ng-repeat="cat in x.field_category">
+              {{ cat.title }}
+            </li>
           </ul>
         </div>
         <div class="search-keywords-container">
           <i class="fa fa-tags" title="Search Keywords"></i>
           <span class="hidden-xs">Search Keywords:</span>
-          <ul ng-repeat="sk in x.field_tags">
-            <li>{{ sk.title }}</li>
+          <ul>
+            <li ng-repeat="sk in x.field_tags">{{ sk.title }}</li>
           </ul>
         </div>
-        <div class="address-container">
+        <div class="location-address-container">
           <i class="fa fa-car" title="Address"></i>
           <span class="hidden-xs">Address:</span>
-          <div ng-bind-html="x.field_location_address"></div>
+          <span ng-bind-html="x.field_location_address"></span>
+          <span>{{ x.field_location_zip }}</span>
+          <span>{{ x.field_room_number }}</span>
         </div>
-        <div>{{ x.field_location_zip }}</div>
-        <div>{{ x.field_room_number }}</div>
-        <div ng-bind-html="x.field_location_phone"></div>
-        <div ng-bind-html="x.field_location_hours"></div>
-        <div ng-bind-html="x.field_services"></div>
-        <div ng-bind-html="x.field_services_contact"></div>
-        <div ng-bind-html="x.field_eligibility"></div>
-        <div ng-bind-html="x.field_how_best_to_access"></div>
+        <div class="location-phone-container">
+          <i class="fa fa-phone" title="Phone"></i>
+          <span class="hidden-xs">Phone:</span>
+          <span ng-bind-html="x.field_location_phone"></span>
+        </div>
+        <div class="location-hours-container">
+          <i class="fa fa-clock-o" title="Hours"></i>
+          <span class="hidden-xs">Hours:</span>
+          <span ng-bind-html="x.field_location_hours"></span>
+        </div>
+        <div class="services-container">
+          <span class="hidden-xs">Services:</span>
+          <span ng-bind-html="x.field_services"></span>
+        </div>
+        <div class="services-contact-container">
+          <span>Services contact:</span>
+          <span ng-bind-html="x.field_services_contact"></span>
+        </div>
+        <div class="eligibility-container">
+          <span>Eligibility:</span>
+          <span ng-bind-html="x.field_eligibility"></span>
+        </div>
+        <div class="how-best-to-access-container">
+          <span>How best to access:</span>
+          <span ng-bind-html="x.field_how_best_to_access"></span>
+        </div>
       </div>
     </div>
   </div>
