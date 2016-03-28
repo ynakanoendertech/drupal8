@@ -30,3 +30,6 @@ angularjs-scripts:
     js/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js: {}
     # Custom JS
     js/resource-guide.js: {}
+  css:
+    theme:
+      js/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css: {}
