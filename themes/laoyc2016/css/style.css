@@ -6972,7 +6972,7 @@ p:last-child,
 /**
  * LA OYC 2016 styles.
  */
-.view-resource-guide .field--name-field-services {
+.resource-guide-list {
   overflow-wrap: break-word;
   word-wrap: break-word;
   -ms-word-break: break-all;
