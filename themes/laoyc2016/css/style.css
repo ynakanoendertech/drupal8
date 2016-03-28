@@ -6997,8 +6997,9 @@ p:last-child,
 .resource-guide-list ul {
   display: inline-block;
   list-style: none;
-  margin-left: -5px;
   padding-left: 0;
+  margin-left: -5px;
+  margin-bottom: 0;
 }
 .resource-guide-list ul > li {
   display: inline-block;

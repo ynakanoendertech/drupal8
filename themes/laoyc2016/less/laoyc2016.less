@@ -44,6 +44,7 @@
 // -------------------------------------
 
 // Text wrap long urls.
+// - These rules are inspired by 'list-inline' bootstrap class.
 .resource-guide-list {
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -60,8 +61,10 @@
   ul {
     display: inline-block;
     list-style: none;
-    margin-left: -5px;
     padding-left: 0;
+    // Reset bootstrap default
+    margin-left: -5px;
+    margin-bottom: 0;
 
     > li {
       display: inline-block;
