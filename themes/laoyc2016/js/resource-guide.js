@@ -2,7 +2,7 @@
 
   "use strict";
 
-  var app = angular.module('myApp', ['ngSanitize', 'ngAnimate', 'ngTouch']);
+  var app = angular.module('myApp', ['ngSanitize', 'ngAnimate', 'ngTouch', 'ui.bootstrap']);
 
   app.controller('myCtrl', function($scope) {
 
