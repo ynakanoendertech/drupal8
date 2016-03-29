@@ -69,11 +69,6 @@
         <div>
           <a href="{{ x.url }}">{{ x.title }}</a>
         </div>
-        <div class="location-url-container">
-          <i class="fa fa-home" title="Url"></i>
-          <span class="hidden-xs">URL:</span>
-          <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
-        </div>
         <div class="category-container">
           <i class="fa fa-star" title="Category"></i>
           <span class="hidden-xs">Category:</span>
@@ -96,6 +91,11 @@
           <span ng-bind-html="x.field_location_address"></span>
           <span>{{ x.field_location_zip }}</span>
           <span>{{ x.field_room_number }}</span>
+        </div>
+        <div class="location-url-container">
+          <i class="fa fa-home" title="Url"></i>
+          <span class="hidden-xs">URL:</span>
+          <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
         </div>
         <div class="location-phone-container">
           <i class="fa fa-phone" title="Phone"></i>
