@@ -6977,12 +6977,6 @@ p:last-child,
     padding-left: 15px;
   }
 }
-.resource-guide-list .location {
-  border-bottom: 1px solid #eee;
-}
-.resource-guide-list .location:last-of-type {
-  border-bottom: none;
-}
 .resource-guide-list {
   overflow-wrap: break-word;
   word-wrap: break-word;
