@@ -91,14 +91,14 @@
               </ul>
             </div>
             <div ng-show="x.field_location_address" class="location-address-container">
-              <i class="fa fa-car" title="Address"></i>
+              <i class="fa fa-map-marker" title="Address"></i>
               <span class="hidden-xs">Address:</span>
               <span ng-bind-html="x.field_location_address"></span>
               <span>{{ x.field_location_zip }}</span>
               <span>{{ x.field_room_number }}</span>
             </div>
             <div ng-show="x.field_location_url" class="location-url-container">
-              <i class="fa fa-home" title="Url"></i>
+              <i class="fa fa-link" title="Url"></i>
               <span class="hidden-xs">URL:</span>
               <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
             </div>
@@ -128,7 +128,7 @@
               <div ng-bind-html="x.field_how_best_to_access"></div>
             </div>
             <div ng-show="x.field_organization" class="organization-container">
-              <i class="fa fa-university" title="Organization"></i>
+              <i class="fa fa-building" title="Organization"></i>
               <span class="hidden-xs">Organization:</span>
               <ul>
                 <li ng-repeat="org in x.field_organization">
