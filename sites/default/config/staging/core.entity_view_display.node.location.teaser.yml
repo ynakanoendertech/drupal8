@@ -34,7 +34,7 @@ content:
       link: true
     third_party_settings: {  }
   field_location_address:
-    type: text_default
+    type: basic_string
     weight: 3
     label: inline
     settings: {  }
