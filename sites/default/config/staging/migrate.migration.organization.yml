@@ -1,7 +1,9 @@
-uuid: 7498a474-b38c-435d-8417-2328e0b12fc1
+uuid: 63d824ad-c74a-4763-a500-e7d157dadd20
 langcode: en
 status: true
 dependencies:
+  config:
+    - migrate.migration.basic_page
   module:
     - migrate_source_csv
     - node
@@ -11,7 +13,7 @@ migration_tags:
 label: 'Import orgaizations'
 source:
   plugin: csv
-  path: /Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/organization.csv
+  path: /Applications/MAMP/htdocs/drupal8a/modules/custom/migrate_custom/csv-data/organization.csv
   header_row_count: 1
   keys:
     - id
@@ -43,5 +45,7 @@ process:
 destination:
   plugin: 'entity:node'
 template: null
-migration_dependencies: {  }
+migration_dependencies:
+  required:
+    - basic_page
 migration_group: initial_data

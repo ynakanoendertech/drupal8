@@ -1,11 +1,11 @@
 uuid: b0b30bc6-4192-40e0-9706-0619cdb62d64
-name: 'drupal8 test site'
+name: 'Los Angeles Opportunity Youth Collaborative'
 mail: ynakano+drupal8testsite@endertech.com
-slogan: 'This is a test site slogan'
+slogan: ''
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

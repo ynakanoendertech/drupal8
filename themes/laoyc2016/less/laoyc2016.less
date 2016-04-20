@@ -1,0 +1,72 @@
+/**
+ * LA OYC 2016 styles.
+ */
+
+// Variables import
+@import "../bootstrap/less/variables";
+
+// Media query samples
+@media (min-width: @grid-float-breakpoint) {}
+@media (max-width: @grid-float-breakpoint-max) {}
+
+// -------------------------------------
+// General
+// -------------------------------------
+
+// -------------------------------------
+// Nav
+// -------------------------------------
+
+// Add left padding to logo on mobile.
+@media (max-width: @grid-float-breakpoint-max) {
+  .logo {
+    padding-left: 15px;
+  }
+}
+
+// Navbar background.
+.navbar-default {
+  //background-image: url('../images/mobile-top-banner.jpg');
+}
+
+// -------------------------------------
+// Resource Guide
+// -------------------------------------
+
+// Text wrap long urls.
+// - These rules are inspired by 'list-inline' bootstrap class.
+.resource-guide-list {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  -ms-word-break: break-all;
+  word-break: break-word;
+
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+
+  ul {
+    display: inline-block;
+    list-style: none;
+    padding-left: 0;
+    // Reset bootstrap default
+    margin-left: -5px;
+    margin-bottom: 0;
+
+    > li {
+      display: inline-block;
+      padding-left: 5px;
+      //padding-right: 5px;
+
+      &:after {
+        content: ", ";
+      }
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}

@@ -1,7 +1,9 @@
-uuid: 6a4190ff-1b04-4a5b-be5b-9171eb261f17
+uuid: 567ef2c7-2882-4409-8818-24eb52f1e950
 langcode: en
 status: true
 dependencies:
+  config:
+    - migrate.migration.basic_page
   module:
     - migrate_source_csv
     - taxonomy
@@ -11,7 +13,7 @@ migration_tags:
 label: 'Import Search Keywords entries from CSV to taxonomy terms'
 source:
   plugin: csv
-  path: /Applications/MAMP/htdocs/drupal8a/modules/local/migrate_custom/csv-data/search_keywords.csv
+  path: /Applications/MAMP/htdocs/drupal8a/modules/custom/migrate_custom/csv-data/search_keywords.csv
   header_row_count: 1
   keys:
     - id
@@ -31,5 +33,7 @@ process:
 destination:
   plugin: 'entity:taxonomy_term'
 template: null
-migration_dependencies: {  }
+migration_dependencies:
+  required:
+    - basic_page
 migration_group: initial_data

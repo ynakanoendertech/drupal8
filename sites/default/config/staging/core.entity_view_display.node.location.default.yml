@@ -50,19 +50,19 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
   field_location_hours:
     weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
   field_location_phone:
     weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    type: basic_string
   field_location_url:
     weight: 0
     label: above

@@ -1,16 +1,16 @@
-uuid: c8d294e5-90d2-464e-a503-3c0dff23f39f
+uuid: 28d0cfa5-3d9e-4025-9b14-20d244261520
 langcode: en
 status: true
 dependencies:
   module:
     - node
-    - text
 id: node.field_location_phone
 field_name: field_location_phone
 entity_type: node
-type: text_long
-settings: {  }
-module: text
+type: string_long
+settings:
+  case_sensitive: false
+module: core
 locked: false
 cardinality: 1
 translatable: true
