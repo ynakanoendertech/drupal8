@@ -52,6 +52,21 @@ class MyCustomTwigExtension extends \Twig_Extension {
     }
 
     /**
+     * Helper function to truncate string
+     */
+    function truncate($string, $length = 300, $append = "&hellip;") {
+        $string = trim($string);
+
+        if(strlen($string) > $length) {
+            $string = wordwrap($string, $length);
+            $string = explode("\n", $string, 2);
+            $string = $string[0] . $append;
+        }
+
+        return $string;
+    }
+
+    /**
      * JSON encode Location view content data
      */
     public function jsonEncodeLocationView($content) {
@@ -94,7 +109,10 @@ class MyCustomTwigExtension extends \Twig_Extension {
                                 case 'field_services':
                                 case 'field_services_contact':
                                     if (isset( $value5->getValue()[0]['value'] )) {
-                                        $fields[$key5] = $this->removeNewlineCharacters( $value5->getValue()[0]['value'] );
+                                        $sanitized = $this->removeNewlineCharacters( $value5->getValue()[0]['value'] );
+                                        $sanitized = strip_tags($sanitized);
+                                        $truncated = $this->truncate($sanitized);
+                                        $fields[$key5] = $truncated;
                                     }
                                     break;
 

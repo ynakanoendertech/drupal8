@@ -65,75 +65,84 @@
   {% verbatim %}
   <div class="row">
     <div class="col-sm-12">
+
       <div ng-repeat="x in resourceGuideData" class="location">
-        <div>
-          <a href="{{ x.url }}">{{ x.title }}</a>
-        </div>
-        <div class="location-url-container">
-          <i class="fa fa-home" title="Url"></i>
-          <span class="hidden-xs">URL:</span>
-          <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
-        </div>
-        <div class="category-container">
-          <i class="fa fa-star" title="Category"></i>
-          <span class="hidden-xs">Category:</span>
-          <ul>
-            <li ng-repeat="cat in x.field_category">
-              {{ cat.title }}
-            </li>
-          </ul>
-        </div>
-        <div class="search-keywords-container">
-          <i class="fa fa-tags" title="Search Keywords"></i>
-          <span class="hidden-xs">Search Keywords:</span>
-          <ul>
-            <li ng-repeat="sk in x.field_tags">{{ sk.title }}</li>
-          </ul>
-        </div>
-        <div class="location-address-container">
-          <i class="fa fa-car" title="Address"></i>
-          <span class="hidden-xs">Address:</span>
-          <span ng-bind-html="x.field_location_address"></span>
-          <span>{{ x.field_location_zip }}</span>
-          <span>{{ x.field_room_number }}</span>
-        </div>
-        <div class="location-phone-container">
-          <i class="fa fa-phone" title="Phone"></i>
-          <span class="hidden-xs">Phone:</span>
-          <span ng-bind-html="x.field_location_phone"></span>
-        </div>
-        <div class="location-hours-container">
-          <i class="fa fa-clock-o" title="Hours"></i>
-          <span class="hidden-xs">Hours:</span>
-          <span ng-bind-html="x.field_location_hours"></span>
-        </div>
-        <div class="services-container">
-          <span ng-bind-html="x.field_services"></span>
-        </div>
-        <div class="services-contact-container">
-          <div>Services contact:</div>
-          <div ng-bind-html="x.field_services_contact"></div>
-        </div>
-        <div class="eligibility-container">
-          <div>Eligibility:</div>
-          <div ng-bind-html="x.field_eligibility"></div>
-        </div>
-        <div class="how-best-to-access-container">
-          <div>How best to access:</div>
-          <div ng-bind-html="x.field_how_best_to_access"></div>
-        </div>
-        <div class="organization-container">
-          <i class="fa fa-university" title="Organization"></i>
-          <span class="hidden-xs">Organization:</span>
-          <ul>
-            <li ng-repeat="org in x.field_organization">
-              <a href="{{ org.url }}">{{ org.title }}</a>
-            </li>
-          </ul>
-        </div>
+        <uib-accordion close-others="false">
+          <uib-accordion-group template-url="themes/laoyc2016/js/node_modules/angular-ui-bootstrap/template/accordion/accordion-group-laoyc2016.html">
+
+            <uib-accordion-heading>
+              {{ x.title }}
+            </uib-accordion-heading>
+
+            <div ng-show="x.field_category" class="category-container">
+              <i class="fa fa-star" title="Category"></i>
+              <span class="hidden-xs">Category:</span>
+              <ul>
+                <li ng-repeat="cat in x.field_category">
+                  {{ cat.title }}
+                </li>
+              </ul>
+            </div>
+            <div ng-show="x.field_tags" class="search-keywords-container">
+              <i class="fa fa-tags" title="Search Keywords"></i>
+              <span class="hidden-xs">Search Keywords:</span>
+              <ul>
+                <li ng-repeat="sk in x.field_tags">{{ sk.title }}</li>
+              </ul>
+            </div>
+            <div ng-show="x.field_location_address" class="location-address-container">
+              <i class="fa fa-map-marker" title="Address"></i>
+              <span class="hidden-xs">Address:</span>
+              <span ng-bind-html="x.field_location_address"></span>
+              <span>{{ x.field_location_zip }}</span>
+              <span>{{ x.field_room_number }}</span>
+            </div>
+            <div ng-show="x.field_location_url" class="location-url-container">
+              <i class="fa fa-link" title="Url"></i>
+              <span class="hidden-xs">URL:</span>
+              <a href="{{ x.field_location_url }}">{{ x.field_location_url }}</a>
+            </div>
+            <div ng-show="x.field_location_phone" class="location-phone-container">
+              <i class="fa fa-phone" title="Phone"></i>
+              <span class="hidden-xs">Phone:</span>
+              <span ng-bind-html="x.field_location_phone"></span>
+            </div>
+            <div ng-show="x.field_location_hours" class="location-hours-container">
+              <i class="fa fa-clock-o" title="Hours"></i>
+              <span class="hidden-xs">Hours:</span>
+              <span ng-bind-html="x.field_location_hours"></span>
+            </div>
+            <div ng-show="x.field_services" class="services-container">
+              <span ng-bind-html="x.field_services"></span>
+            </div>
+            <div ng-show="x.field_services_contact" class="services-contact-container">
+              <div>Services contact:</div>
+              <div ng-bind-html="x.field_services_contact"></div>
+            </div>
+            <div ng-show="x.field_eligibility" class="eligibility-container">
+              <div>Eligibility:</div>
+              <div ng-bind-html="x.field_eligibility"></div>
+            </div>
+            <div ng-show="x.field_how_best_to_access" class="how-best-to-access-container">
+              <div>How best to access:</div>
+              <div ng-bind-html="x.field_how_best_to_access"></div>
+            </div>
+            <div ng-show="x.field_organization" class="organization-container">
+              <i class="fa fa-building" title="Organization"></i>
+              <span class="hidden-xs">Organization:</span>
+              <ul>
+                <li ng-repeat="org in x.field_organization">
+                  <a href="{{ org.url }}">{{ org.title }}</a>
+                </li>
+              </ul>
+            </div>
+
+          </uib-accordion-group>
+        </uib-accordion>
       </div>
-    </div>
-  </div>
+
+    </div><!-- grid column -->
+  </div><!-- row -->
   {% endverbatim %}
 
 </section>
