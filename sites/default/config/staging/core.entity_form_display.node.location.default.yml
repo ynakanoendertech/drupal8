@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.location.field_location_url
     - field.field.node.location.field_location_zip
     - field.field.node.location.field_organization
+    - field.field.node.location.field_organization_2
     - field.field.node.location.field_room_number
     - field.field.node.location.field_services
     - field.field.node.location.field_services_contact
@@ -28,7 +29,7 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 15
+    weight: 16
     settings: {  }
     third_party_settings: {  }
   field_category:
@@ -96,6 +97,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_organization_2:
+    weight: 14
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
   field_room_number:
     weight: 4
     settings:
@@ -127,20 +136,20 @@ content:
     type: entity_reference_autocomplete
   path:
     type: path
-    weight: 18
+    weight: 19
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 16
+    weight: 17
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 17
+    weight: 18
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -151,7 +160,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 14
+    weight: 15
     settings:
       match_operator: CONTAINS
       size: 60
