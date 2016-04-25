@@ -40,6 +40,8 @@ source:
       search_keywords: Search Keywords
     14:
       organization: Organization
+    15:
+      organization_2: Secondary Organization
 
 destination:
   plugin: entity:node
@@ -70,6 +72,10 @@ process:
   field_organization:
     plugin: node_reference
     source: organization
+    content_type: organization
+  field_organization_2:
+    plugin: node_reference
+    source: organization_2
     content_type: organization
   status:
     plugin: default_value
