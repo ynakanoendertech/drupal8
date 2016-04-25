@@ -13,6 +13,7 @@ dependencies:
     - field.field.node.location.field_location_url
     - field.field.node.location.field_location_zip
     - field.field.node.location.field_organization
+    - field.field.node.location.field_organization_2
     - field.field.node.location.field_room_number
     - field.field.node.location.field_services
     - field.field.node.location.field_services_contact
@@ -28,20 +29,20 @@ mode: teaser
 content:
   field_category:
     type: entity_reference_label
-    weight: 1
+    weight: 2
     label: inline
     settings:
       link: true
     third_party_settings: {  }
   field_location_address:
     type: basic_string
-    weight: 3
+    weight: 4
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_location_zip:
     type: string
-    weight: 5
+    weight: 6
     label: inline
     settings:
       link_to_entity: false
@@ -53,29 +54,36 @@ content:
     settings:
       link: false
     third_party_settings: {  }
+  field_organization_2:
+    type: entity_reference_label
+    weight: 1
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
   field_room_number:
     type: string
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_services:
     type: text_trimmed
-    weight: 6
+    weight: 7
     label: inline
     settings:
       trim_length: 600
     third_party_settings: {  }
   field_tags:
     type: entity_reference_label
-    weight: 2
+    weight: 3
     label: inline
     settings:
       link: true
     third_party_settings: {  }
   links:
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
 hidden:
