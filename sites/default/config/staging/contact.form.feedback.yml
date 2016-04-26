@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: feedback
-label: 'Website feedback'
+label: 'Contact OYC'
 recipients:
   - ynakano@endertech.com
 reply: ''
