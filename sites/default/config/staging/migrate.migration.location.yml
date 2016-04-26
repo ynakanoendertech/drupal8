@@ -1,4 +1,4 @@
-uuid: ed2ef00f-8885-4a27-ac09-9fcf83ad42d6
+uuid: 8af5e2e2-9345-4454-9346-7088cdc1c59f
 langcode: en
 status: true
 dependencies:
@@ -51,6 +51,8 @@ source:
       search_keywords: 'Search Keywords'
     -
       organization: Organization
+    -
+      organization_2: 'Secondary Organization'
 process:
   type:
     plugin: default_value
@@ -77,6 +79,10 @@ process:
   field_organization:
     plugin: node_reference
     source: organization
+    content_type: organization
+  field_organization_2:
+    plugin: node_reference
+    source: organization_2
     content_type: organization
   status:
     plugin: default_value
