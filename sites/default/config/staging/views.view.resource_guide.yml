@@ -5,9 +5,12 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.location
+    - taxonomy.vocabulary.category
+    - taxonomy.vocabulary.tags
   module:
     - node
     - rest
+    - taxonomy
     - user
 id: resource_guide
 label: 'Resource guide'
@@ -138,9 +141,9 @@ display:
           group_type: group
           admin_label: ''
           order: ASC
-          exposed: false
+          exposed: true
           expose:
-            label: ''
+            label: 'Location ZIP (field_location_zip)'
           plugin_id: standard
       title: 'Resource Guide'
       header: {  }
@@ -154,6 +157,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -170,6 +175,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -181,11 +188,211 @@ display:
     display_options:
       display_extenders: {  }
       path: resource-guide
+      pager:
+        type: full
+        options:
+          items_per_page: 20
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: '‹ Previous'
+            next: 'Next ›'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      defaults:
+        pager: false
+        filters: false
+        filter_groups: false
+        sorts: false
+      filters:
+        status:
+          value: true
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            location: location
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Title
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+        field_category_target_id:
+          id: field_category_target_id
+          table: node__field_category
+          field: field_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_category_target_id_op
+            label: 'Category (field_category)'
+            description: ''
+            use_operator: false
+            operator: field_category_target_id_op
+            identifier: field_category_target_id
+            required: false
+            remember: true
+            multiple: false
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: category
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_tags_target_id:
+          id: field_tags_target_id
+          table: node__field_tags
+          field: field_tags_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_tags_target_id_op
+            label: 'Search Keywords (field_tags)'
+            description: ''
+            use_operator: false
+            operator: field_tags_target_id_op
+            identifier: field_tags_target_id
+            required: false
+            remember: true
+            multiple: true
+            remember_roles:
+              anonymous: anonymous
+              authenticated: authenticated
+              administrator: administrator
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: textfield
+          limit: true
+          vid: tags
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      sorts:
+        field_location_zip_value:
+          id: field_location_zip_value
+          table: node__field_location_zip
+          field: field_location_zip_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: 'Location ZIP (field_location_zip)'
+          plugin_id: standard
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -209,6 +416,8 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - request_format
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
