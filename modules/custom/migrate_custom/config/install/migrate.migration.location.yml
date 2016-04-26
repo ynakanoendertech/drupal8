@@ -79,7 +79,7 @@ process:
     content_type: organization
   status:
     plugin: default_value
-    default_value: 0
+    default_value: 1
 
 migration_dependencies:
   required:
