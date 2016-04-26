@@ -6972,6 +6972,9 @@ p:last-child,
 /**
  * LA OYC 2016 styles.
  */
+div.region.region-header .alert.alert-danger.alert-dismissible {
+  display: none;
+}
 @media (max-width: 767px) {
   .logo {
     padding-left: 15px;
