@@ -9,9 +9,27 @@
 @media (min-width: @grid-float-breakpoint) {}
 @media (max-width: @grid-float-breakpoint-max) {}
 
+// -------------------------------------
+// Demo 2016/04/26
+// -------------------------------------
+
 // Hide taxonomy exposed filter bug error
 div.region.region-header .alert.alert-danger.alert-dismissible {
   display: none;
+}
+
+// Simple style on category grid
+.resource-guide-category-grid .row div[class^="col-"] {
+  padding: 5px;
+  a {
+    background-color: #EFF7FF;
+    border-radius: 5px;
+    /* min-height: 40px; */
+    /* vertical-align: middle; */
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+  }
 }
 
 // -------------------------------------
