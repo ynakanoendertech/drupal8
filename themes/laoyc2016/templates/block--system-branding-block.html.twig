@@ -20,11 +20,11 @@
     {% set site_logo = base_path ~ '/themes/laoyc2016/images/logo/logo.png' %}
     {% if site_name %}
       <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ site_name }}" rel="home">
-        <img src="{{ site_logo }}" alt="{{ site_name }}" />
+        <div class="logo-image"></div>
       </a>
     {% else %}
       <a class="logo navbar-btn pull-left" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-        <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+        <div class="logo-image"></div>
       </a>
     {% endif %}
   {% endif %}
