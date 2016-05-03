@@ -45,7 +45,8 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
   .logo-image {
     background-image: url(/themes/laoyc2016/images/logo/logo.png);
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-position: center center;
+    background-size: contain;
     padding-top: 62.836624775583%;
     width: 200px;
     height: auto;
@@ -55,13 +56,16 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
 // Add left padding to logo on mobile.
 @media (max-width: @grid-float-breakpoint-max) {
   .logo {
-    //padding-left: 15px;
+    padding: 2.5vw 1vw 2.5vw 3.5vw;
+    .logo-image {
+      background-image: url(/themes/laoyc2016/images/logo/logo-horizontal.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      padding-top: 12.831389183457%;
+      width: 70vw;
+    }
   }
-}
-
-// Navbar background.
-.navbar-default {
-  //background-image: url('../images/mobile-top-banner.jpg');
 }
 
 // -------------------------------------

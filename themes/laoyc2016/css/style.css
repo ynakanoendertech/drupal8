@@ -6993,10 +6993,24 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
 .logo .logo-image {
   background-image: url(/themes/laoyc2016/images/logo/logo.png);
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-position: center center;
+  background-size: contain;
   padding-top: 62.836624775583%;
   width: 200px;
   height: auto;
+}
+@media (max-width: 767px) {
+  .logo {
+    padding: 2.5vw 1vw 2.5vw 3.5vw;
+  }
+  .logo .logo-image {
+    background-image: url(/themes/laoyc2016/images/logo/logo-horizontal.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-top: 12.831389183457%;
+    width: 70vw;
+  }
 }
 .resource-guide-list {
   overflow-wrap: break-word;
