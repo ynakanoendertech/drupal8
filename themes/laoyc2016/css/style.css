@@ -6987,10 +6987,9 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
   padding: 10px 0;
   display: block;
 }
-@media (max-width: 767px) {
-  .logo {
-    padding-left: 15px;
-  }
+.logo img {
+  max-width: 250px;
+  padding: 28px 30px 28px 15px;
 }
 .resource-guide-list {
   overflow-wrap: break-word;
