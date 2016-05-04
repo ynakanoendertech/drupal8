@@ -9,6 +9,7 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
+// Gray
 @gray-base:              #000;
 @gray-darker:            lighten(@gray-base, 13.5%); // #222
 @gray-dark:              lighten(@gray-base, 20%);   // #333
@@ -16,7 +17,21 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+// Color palette
+//## Primary colors
+@color-palette-pms-emerald:      #00A880;
+@color-palette-pms-361:          #34B233;
+@color-palette-pms-3265:         #00C7B2;
+@color-palette-pms-cool-gray-11: #4D4F53;
+@color-palette-pms-390:          #B6BF00;
+//## Secondary colors
+@color-palette-pms-2925:         #0098DB;
+@color-palette-pms-7477:         #22505F;
+@color-palette-pms-526:          #652D86;
+@color-palette-pms-cool-gray-6:  #ADAFAF;
+
+//@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-primary:        @color-palette-pms-emerald;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
