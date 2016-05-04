@@ -4476,8 +4476,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-default {
-  background-color: #f8f8f8;
-  border-color: #e7e7e7;
+  background-color: #fdfdfd;
+  border-color: #ececec;
 }
 .navbar-default .navbar-brand {
   color: #777777;
@@ -4502,7 +4502,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #555555;
-  background-color: #e7e7e7;
+  background-color: #ececec;
 }
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
@@ -4522,12 +4522,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
-  border-color: #e7e7e7;
+  border-color: #ececec;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #e7e7e7;
+  background-color: #ececec;
   color: #555555;
 }
 @media (max-width: 767px) {
@@ -4543,7 +4543,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #555555;
-    background-color: #e7e7e7;
+    background-color: #ececec;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
@@ -6987,9 +6987,29 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
   padding: 10px 0;
   display: block;
 }
+.logo {
+  padding: 30px 30px 28px 25px;
+}
+.logo .logo-image {
+  background-image: url(/themes/laoyc2016/images/logo/logo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  padding-top: 62.836624775583%;
+  width: 200px;
+  height: auto;
+}
 @media (max-width: 767px) {
   .logo {
-    padding-left: 15px;
+    padding: 2.5vw 1vw 2.5vw 3.5vw;
+  }
+  .logo .logo-image {
+    background-image: url(/themes/laoyc2016/images/logo/logo-horizontal.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-top: 12.831389183457%;
+    width: 70vw;
   }
 }
 .resource-guide-list {
