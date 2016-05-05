@@ -22,7 +22,7 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
 .resource-guide-category-grid .row div[class^="col-"] {
   padding: 5px;
   a {
-    background-color: #EFF7FF;
+    background-color: lighten(@color-palette-pms-361, 51.5%);
     border-radius: 5px;
     /* min-height: 40px; */
     /* vertical-align: middle; */
@@ -40,16 +40,31 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
 // Nav
 // -------------------------------------
 
-// Add left padding to logo on mobile.
-@media (max-width: @grid-float-breakpoint-max) {
-  .logo {
-    padding-left: 15px;
+.logo {
+  padding: 30px 30px 28px 25px;
+  .logo-image {
+    background-image: url(/themes/laoyc2016/images/logo/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    padding-top: 62.836624775583%;
+    width: 200px;
+    height: auto;
   }
 }
 
-// Navbar background.
-.navbar-default {
-  //background-image: url('../images/mobile-top-banner.jpg');
+@media (max-width: @grid-float-breakpoint-max) {
+  .logo {
+    padding: 2.5vw 1vw 2.5vw 3.5vw;
+    .logo-image {
+      background-image: url(/themes/laoyc2016/images/logo/logo-horizontal.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+      padding-top: 12.831389183457%;
+      width: 70vw;
+    }
+  }
 }
 
 // -------------------------------------
