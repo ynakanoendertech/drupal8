@@ -272,7 +272,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  color: #333333;
+  color: #414042;
   background-color: #ffffff;
 }
 input,
@@ -2097,7 +2097,7 @@ select[multiple].input-lg {
   display: block;
   margin-top: 5px;
   margin-bottom: 10px;
-  color: #737373;
+  color: #817f83;
 }
 @media (min-width: 768px) {
   .form-inline .form-group {
@@ -5379,7 +5379,7 @@ a.thumbnail.active {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #333333;
+  color: #414042;
 }
 .alert {
   padding: 15px;
