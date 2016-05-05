@@ -341,10 +341,10 @@ display:
             identifier: field_tags_target_id
             required: false
             remember: true
-            multiple: true
+            multiple: false
             remember_roles:
-              anonymous: anonymous
               authenticated: authenticated
+              anonymous: anonymous
               administrator: administrator
             reduce: false
           is_grouped: false
@@ -360,7 +360,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
+          type: select
           limit: true
           vid: tags
           hierarchy: false
