@@ -21,6 +21,10 @@
 @color-palette-pms-7477:         #22505F;
 @color-palette-pms-526:          #652D86;
 @color-palette-pms-cool-gray-6:  #ADAFAF;
+//## Font colors
+@font-color-header:              #22505F;
+@font-color-sub-header:          #4D4F53;
+@font-color-paragraph:           #414042;
 
 // Gray
 @gray-base:              #000;
@@ -33,11 +37,12 @@
 
 // Brand colors
 //@brand-primary:         darken(#428bca, 6.5%); // #337ab7
-@brand-primary:         @color-palette-pms-emerald;
+@brand-primary:         @color-palette-pms-361;
 //@brand-success:         #5cb85c;
-@brand-success:         @color-palette-pms-361;
+@brand-success:         @color-palette-pms-emerald;
 //@brand-info:            #5bc0de;
-@brand-info:            @color-palette-pms-3265;
+//@brand-info:            @color-palette-pms-3265;
+@brand-info:            @color-palette-pms-361;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 
@@ -49,7 +54,8 @@
 //** Background color for `<body>`.
 @body-bg:               #fff;
 //** Global text color on `<body>`.
-@text-color:            @gray-dark;
+//@text-color:            @gray-dark;
+@text-color:            @font-color-paragraph;
 
 //** Global textual link color.
 @link-color:            @brand-primary;
@@ -64,7 +70,8 @@
 //## Font, line-height, and color for body text, headings, and more.
 
 //@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-@font-family-sans-serif:  'Lato', sans-serif;
+//@font-family-sans-serif:  'Lato', sans-serif;
+@font-family-sans-serif:  'Open Sans', sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
