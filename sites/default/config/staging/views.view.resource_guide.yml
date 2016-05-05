@@ -289,7 +289,7 @@ display:
           exposed: true
           expose:
             operator_id: field_category_target_id_op
-            label: 'Category (field_category)'
+            label: Category
             description: ''
             use_operator: false
             operator: field_category_target_id_op
@@ -334,7 +334,7 @@ display:
           exposed: true
           expose:
             operator_id: field_tags_target_id_op
-            label: 'Search Keywords (field_tags)'
+            label: 'Search Keywords'
             description: ''
             use_operator: false
             operator: field_tags_target_id_op
