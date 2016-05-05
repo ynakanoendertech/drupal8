@@ -381,7 +381,7 @@ display:
           order: ASC
           exposed: true
           expose:
-            label: 'Location ZIP (field_location_zip)'
+            label: 'Location ZIP'
           plugin_id: standard
     cache_metadata:
       max-age: -1
