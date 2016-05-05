@@ -3087,6 +3087,9 @@ select[multiple].input-lg {
     width: auto;
     vertical-align: middle;
   }
+  .form-inline #edit-pass.form-control {
+    width: 100%;
+  }
   .form-inline .form-control-static {
     display: inline-block;
   }
@@ -5344,6 +5347,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     display: inline-block;
     width: auto;
     vertical-align: middle;
+  }
+  .navbar-form #edit-pass.form-control {
+    width: 100%;
   }
   .navbar-form .form-control-static {
     display: inline-block;
