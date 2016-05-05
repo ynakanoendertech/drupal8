@@ -6979,7 +6979,7 @@ div.region.region-header .alert.alert-danger.alert-dismissible {
   padding: 5px;
 }
 .resource-guide-category-grid .row div[class^="col-"] a {
-  background-color: #EFF7FF;
+  background-color: #f1fbf1;
   border-radius: 5px;
   /* min-height: 40px; */
   /* vertical-align: middle; */
