@@ -25,7 +25,8 @@ fonts:
     url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
   css:
     theme:
-      //fonts.googleapis.com/css?family=Lato:400,900,700,300,100,100italic,300italic,400italic,700italic,900italic: { type: external }
+      #//fonts.googleapis.com/css?family=Lato:400,900,700,300,100,100italic,300italic,400italic,700italic,900italic: { type: external }
+      //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic: { type: external }
       css/style.css: {}
 
 angularjs-scripts:
