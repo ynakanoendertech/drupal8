@@ -7744,6 +7744,20 @@ button.close {
 .field--label-inline .field--label::after {
   content: ':';
 }
+.field--name-field-category .field--item,
+.field--name-field-tags .field--item {
+  display: inline-block;
+}
+.field--name-field-category .field--item:after,
+.field--name-field-tags .field--item:after {
+  content: ' | ';
+  color: #dad9db;
+  font-weight: 300;
+}
+.field--name-field-category .field--item:last-of-type:after,
+.field--name-field-tags .field--item:last-of-type:after {
+  content: '';
+}
 /**
  * Navbar styling.
  */
