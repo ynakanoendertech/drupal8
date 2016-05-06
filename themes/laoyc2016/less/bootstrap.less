@@ -14,16 +14,14 @@
 // Core CSS
 @import "../bootstrap/less/scaffolding.less";
 //@import "../bootstrap/less/type.less";
+@import "type-overrides.less";  // Override
 @import "../bootstrap/less/code.less";
 @import "../bootstrap/less/grid.less";
 
 @import "../bootstrap/less/tables.less";
 //@import "../bootstrap/less/forms.less";
+@import "forms-overrides.less";  // Override
 @import "../bootstrap/less/buttons.less";
-
-// Core CSS (overrides).
-@import "type-overrides.less";
-@import "forms-overrides.less";
 
 // Components
 @import "../bootstrap/less/component-animations.less";
@@ -33,6 +31,7 @@
 @import "../bootstrap/less/input-groups.less";
 @import "../bootstrap/less/navs.less";
 //@import "../bootstrap/less/navbar.less";
+@import "navbar-overrides.less";  // Override
 @import "../bootstrap/less/breadcrumbs.less";
 @import "../bootstrap/less/pagination.less";
 @import "../bootstrap/less/pager.less";
@@ -47,9 +46,6 @@
 @import "../bootstrap/less/panels.less";
 @import "../bootstrap/less/wells.less";
 @import "../bootstrap/less/close.less";
-
-// Components (overrides)
-@import "navbar-overrides.less";
 
 // Components w/ JavaScript
 @import "../bootstrap/less/modals.less";
