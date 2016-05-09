@@ -1,6 +1,6 @@
 uuid: f6e64acd-8b8e-4f2d-9600-e42e57e51c97
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.account
@@ -10,8 +10,8 @@ dependencies:
     - laoyc2016
 id: laoyc2016_account_menu
 theme: laoyc2016
-region: navigation_collapsible
-weight: -8
+region: '-1'
+weight: -7
 provider: null
 plugin: 'system_menu_block:account'
 settings:
