@@ -1,9 +1,0 @@
-uuid: 4a1cc1a1-b58e-4299-845d-93d495f9d68f
-langcode: en
-status: true
-dependencies: {  }
-name: Category
-vid: category
-description: 'Used to categorize Location nodes.'
-hierarchy: 0
-weight: 0
