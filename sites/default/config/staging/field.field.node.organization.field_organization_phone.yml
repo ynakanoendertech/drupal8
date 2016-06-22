@@ -1,0 +1,21 @@
+uuid: 6d95dcbd-d8f1-4b2b-b754-84852d908b2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_phone
+    - node.type.organization
+  module:
+    - text
+id: node.organization.field_organization_phone
+field_name: field_organization_phone
+entity_type: node
+bundle: organization
+label: 'Organization Phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

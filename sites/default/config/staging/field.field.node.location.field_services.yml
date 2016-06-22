@@ -1,0 +1,21 @@
+uuid: 61444817-3054-4679-8a20-32705e789bde
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_services
+    - node.type.location
+  module:
+    - text
+id: node.location.field_services
+field_name: field_services
+entity_type: node
+bundle: location
+label: Services
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

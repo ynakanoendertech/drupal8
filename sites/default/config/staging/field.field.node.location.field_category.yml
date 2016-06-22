@@ -1,0 +1,27 @@
+uuid: ed4b41b5-3a0a-461d-9d00-ed11596b1acd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.location
+    - taxonomy.vocabulary.category
+id: node.location.field_category
+field_name: field_category
+entity_type: node
+bundle: location
+label: Category
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      category: category
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

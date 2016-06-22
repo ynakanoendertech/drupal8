@@ -1,0 +1,19 @@
+uuid: 505e0f7b-94d1-473b-815a-90596b0e1d7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_location_phone
+    - node.type.location
+id: node.location.field_location_phone
+field_name: field_location_phone
+entity_type: node
+bundle: location
+label: 'Location Phone'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

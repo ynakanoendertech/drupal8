@@ -1,0 +1,27 @@
+uuid: 1adcf7ea-21e1-49b4-8c4b-7533c782b581
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.organization.field_organization_address
+    - field.field.node.organization.field_organization_hours
+    - field.field.node.organization.field_organization_phone
+    - field.field.node.organization.field_organization_url
+    - field.field.node.organization.field_organization_zip
+    - node.type.organization
+  module:
+    - user
+id: node.organization.teaser
+targetEntityType: node
+bundle: organization
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_organization_address: true
+  field_organization_hours: true
+  field_organization_phone: true
+  field_organization_url: true
+  field_organization_zip: true

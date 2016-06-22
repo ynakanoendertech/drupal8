@@ -1,0 +1,21 @@
+uuid: b4c475d5-9741-452c-851f-312096ba47ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eligibility
+    - node.type.location
+  module:
+    - text
+id: node.location.field_eligibility
+field_name: field_eligibility
+entity_type: node
+bundle: location
+label: Eligibility
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

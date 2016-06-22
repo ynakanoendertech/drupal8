@@ -1,0 +1,21 @@
+uuid: 14a45bec-a8a8-4cee-872a-420b84d343a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_how_best_to_access
+    - node.type.location
+  module:
+    - text
+id: node.location.field_how_best_to_access
+field_name: field_how_best_to_access
+entity_type: node
+bundle: location
+label: 'How Best to Access'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

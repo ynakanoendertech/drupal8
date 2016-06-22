@@ -1,0 +1,20 @@
+uuid: 312754ca-7480-46c1-a73a-58dde296cfcb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - laoyc2016
+id: laoyc2016_powered
+theme: laoyc2016
+region: footer
+weight: -8
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

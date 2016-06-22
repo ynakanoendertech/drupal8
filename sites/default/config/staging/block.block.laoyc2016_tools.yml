@@ -1,0 +1,24 @@
+uuid: 0af9db61-fc6b-4ed5-a601-1c17ab84e67b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.tools
+  module:
+    - system
+  theme:
+    - laoyc2016
+id: laoyc2016_tools
+theme: laoyc2016
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'system_menu_block:tools'
+settings:
+  id: 'system_menu_block:tools'
+  label: Tools
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }
