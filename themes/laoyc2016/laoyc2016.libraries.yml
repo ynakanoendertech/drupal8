@@ -1,0 +1,45 @@
+global-styling:
+  css:
+    theme:
+      css/font-awesome.min.css: {}
+      css/style.css: {}
+
+bootstrap-scripts:
+  js:
+    bootstrap/js/affix.js: {}
+    bootstrap/js/alert.js: {}
+    bootstrap/js/button.js: {}
+    bootstrap/js/carousel.js: {}
+    bootstrap/js/collapse.js: {}
+    bootstrap/js/dropdown.js: {}
+    bootstrap/js/modal.js: {}
+    bootstrap/js/tooltip.js: {}
+    bootstrap/js/popover.js: {}
+    bootstrap/js/scrollspy.js: {}
+    bootstrap/js/tab.js: {}
+    bootstrap/js/transition.js: {}
+
+fonts:
+  license:
+    name: SIL Open Font License, 1.1
+    url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+  css:
+    theme:
+      #//fonts.googleapis.com/css?family=Lato:400,900,700,300,100,100italic,300italic,400italic,700italic,900italic: { type: external }
+      //fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic: { type: external }
+      css/style.css: {}
+
+angularjs-scripts:
+  js:
+    # AngularJS
+    js/node_modules/angular/angular.js: {}
+    js/node_modules/angular-sanitize/angular-sanitize.js: {}
+    js/node_modules/angular-animate/angular-animate.js: {}
+    js/node_modules/angular-touch/angular-touch.js: {}
+    js/node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js: {}
+    js/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js: {}
+    # Custom JS
+    js/resource-guide.js: {}
+  css:
+    theme:
+      js/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css: {}
