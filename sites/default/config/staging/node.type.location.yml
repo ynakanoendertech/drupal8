@@ -1,0 +1,17 @@
+uuid: 12290d9c-051c-491a-b205-5cb061eb650c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Location
+type: location
+description: 'Use <em>location</em> to add a community resource.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,19 @@
+uuid: 549c9cb8-0734-4878-9500-aec17565d529
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_services
+field_name: field_services
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

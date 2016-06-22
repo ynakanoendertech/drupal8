@@ -1,0 +1,7 @@
+name: Custom Twig Extension
+type: module
+description: Custom Twig functions and filters.
+core: 8.x
+package: LAOYC
+version: '8.x-1.0-beta1'
+project: 'custom_twig_extension'
